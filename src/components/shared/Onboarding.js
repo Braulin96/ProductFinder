@@ -13,7 +13,7 @@ SwiperCore.use([Navigation, Pagination]);
 const elements = [
   {
     image: FitPeople,
-    title: "example 1",
+    title: "What is your first name",
     description: "description for example 1",
   },
   {
@@ -56,7 +56,7 @@ const styles = {
   },
 };
 
-const Slide = ({ img, title, description, start }) => {
+const Slide = ({ img, title, description, start, children }) => {
   const swiper = useSwiper();
   const swiperSlide = useSwiperSlide();
   return (
@@ -74,7 +74,7 @@ const Slide = ({ img, title, description, start }) => {
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
           <div className="font-medium h-full flex">
             <div className="bg-white bg-opacity-80 m-auto w-full aspect-square rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray">
-              <h2
+              {/* <h2
                 className="pb-2"
                 style={{ fontSize: "1.6rem"}}
               >
@@ -82,7 +82,8 @@ const Slide = ({ img, title, description, start }) => {
               </h2>
               <p style={{ fontSize: "1.1rem"}}>
                 {description}
-              </p>
+              </p> */}
+              {children}
             </div>
           </div>
           <div className="mt-auto">
@@ -122,13 +123,14 @@ const Slide = ({ img, title, description, start }) => {
   );
 };
 
-const Onboarding = ({ start }) => {
+const Onboarding = ({ start, children }) => {
   return (
     <div style={{ overflow: "hidden" }}>
       <Swiper slidesPerView="auto" className="w-100 flex justify-around">
         {elements.map((elements, index) => (
           <SwiperSlide key={index}>
             <Slide
+            children={children}
               //start={start}
               img={elements.image}
               title={elements.title}
