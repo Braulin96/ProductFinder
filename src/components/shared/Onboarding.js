@@ -11,27 +11,27 @@ import FitPeople from "../../assets/images/fitPeople.jpeg";
 SwiperCore.use([Navigation, Pagination]);
 
 const elements = [
-    {
-        image: FitPeople,
-        title: "example 1",
-        description:"description for example 1"
-    },
-    {
-        image: FitPeople,
-        title: "example 2",
-        description:"description for example 2"
-    },
-    {
-        image: FitPeople,
-        title: "example 3",
-        description:"description for example 3"
-    },
-    {
-        image: FitPeople,
-        title: "example 4",
-        description:"description for example 4"
-    },
-]
+  {
+    image: FitPeople,
+    title: "example 1",
+    description: "description for example 1",
+  },
+  {
+    image: FitPeople,
+    title: "example 2",
+    description: "description for example 2",
+  },
+  {
+    image: FitPeople,
+    title: "example 3",
+    description: "description for example 3",
+  },
+  {
+    image: FitPeople,
+    title: "example 4",
+    description: "description for example 4",
+  },
+];
 
 const styles = {
   slide: {
@@ -47,7 +47,6 @@ const styles = {
     backgroundColor: "black",
     position: "relative",
   },
-
   container: {
     minHeight: "100vh",
     alignItems: "center",
@@ -72,14 +71,21 @@ const Slide = ({ img, title, description, start }) => {
             <FiChevronLeft style={{ color: "white" }} size={28} />
           </a>
         )}
-        <div className="mt-auto p-4 md:p-12" style={{ zIndex: 1 }}>
-          <div className="mb-12 font-medium">
-            <h2 className="pb-2" style={{ fontSize: "1.6rem", color: "white" }}>
-              {title}
-            </h2>
-            <p style={{ fontSize: "1.1rem", color: "white" }}> {description}</p>
+        <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
+          <div className="font-medium h-full flex">
+            <div className="bg-white bg-opacity-80 m-auto w-full aspect-square rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray">
+              <h2
+                className="pb-2"
+                style={{ fontSize: "1.6rem"}}
+              >
+                {title}
+              </h2>
+              <p style={{ fontSize: "1.1rem"}}>
+                {description}
+              </p>
+            </div>
           </div>
-          <div className="mb-4">
+          <div className="mt-auto">
             {swiper.isEnd ? (
               <a
                 className="rounded-full font-semibold flex bg-white py-1.5 justify-center text-[#334251] hover:text-[#334251] w-full"
@@ -108,7 +114,7 @@ const Slide = ({ img, title, description, start }) => {
           left: 0,
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "cener",
           opacity: 0.4,
         }}
       />
