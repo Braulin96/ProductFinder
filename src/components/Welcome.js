@@ -18,7 +18,7 @@ const welcomeData = [
 
 const Module = ({ backgroundImage, description }) => {
   return (
-    <div className="w-64 h-72 rounded-lg flex flex-col relative overflow-hidden border-gray-100 shadow-md">
+    <div className="sm:w-64 min-w-64 w-full h-72 rounded-lg flex flex-col relative overflow-hidden border-gray-100 shadow-md">
       <div
         className="my-auto h-full flex"
         style={{
@@ -27,8 +27,8 @@ const Module = ({ backgroundImage, description }) => {
         }}
       ></div>
 
-      <div className="bg-blue-500 w-full py-2 px-8">
-        <p>{description}</p>
+      <div className="bg-blue-500 w-full px-8 h-16  my-auto flex text-center justify-center">
+        <p className="my-auto">{description}</p>
       </div>
     </div>
   );
@@ -36,21 +36,19 @@ const Module = ({ backgroundImage, description }) => {
 
 const Welcome = () => {
   return (
-    <div
-      className="my-auto h-full bg-blue-500 "
-      style={{ height: "100vh", maxHeight: "800px" }}
-    >
-      <div className="max-w-7xl bg-red-500 w-full text-white h-full mx-auto flex">
-        <div className="m-auto text-center">
+    <div className="my-auto h-full bg-blue-500 py-32 flex">
+      <div className="max-w-7xl bg-red-500 w-full text-white h-full mx-auto flex my-auto">
+        <div className="m-auto text-center w-full">
           <p>
             Welcome to <br />
             <span className="text-primary-blue text-2xl font-semibold">
               My Fitness Grow
             </span>
           </p>
-          <div className="mt-12 flex justify-between gap-x-24">
+          <div className="mt-12 flex justify-center flex-wrap w-full md:px-24 gap-x-12 px-8 gap-y-8">
             {welcomeData.map((data, index) => (
               <Module
+                key={index}
                 backgroundImage={data.image}
                 description={data.description}
               />
