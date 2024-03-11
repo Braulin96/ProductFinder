@@ -1,4 +1,20 @@
 import FitPeople from "../assets/images/fitPeople.jpeg";
+import FitWoman from "../assets/images/fitWoman.webp";
+
+const welcomeData = [
+  {
+    image: FitPeople,
+    description: "Ready for some Wins? Start tracking, it is easy!",
+  },
+  {
+    image: FitWoman,
+    description: "second message!",
+  },
+  {
+    image: FitPeople,
+    description: "Third message",
+  },
+];
 
 const Module = ({ backgroundImage, description }) => {
   return (
@@ -32,11 +48,13 @@ const Welcome = () => {
               My Fitness Grow
             </span>
           </p>
-          <div className="mt-12 flex justify-between gap-x-4">
-            <Module
-              backgroundImage={FitPeople}
-              description="Ready for some Wins? Start tracking, it is easy!"
-            />
+          <div className="mt-12 flex justify-between gap-x-24">
+            {welcomeData.map((data, index) => (
+              <Module
+                backgroundImage={data.image}
+                description={data.description}
+              />
+            ))}
           </div>
         </div>
       </div>
