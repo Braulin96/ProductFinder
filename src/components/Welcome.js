@@ -27,8 +27,8 @@ const Module = ({ backgroundImage, description }) => {
         }}
       ></div>
 
-      <div className="bg-blue-500 w-full px-8 h-16  my-auto flex text-center justify-center">
-        <p className="my-auto">{description}</p>
+      <div className="bg-white w-full px-8 h-16  my-auto flex text-center justify-center">
+        <p className="my-auto text-secondary-gray">{description}</p>
       </div>
     </div>
   );
@@ -36,13 +36,13 @@ const Module = ({ backgroundImage, description }) => {
 
 const Welcome = () => {
   return (
-    <div className="my-auto h-full bg-blue-500 lg:py-32 md:py-24 sm:py-12 py-8 flex">
-      <div className="max-w-7xl bg-red-500 w-full text-white h-full mx-auto flex my-auto">
+    <div className="my-auto h-full bg-tertiary-gray lg:py-32 md:py-24 sm:py-12 py-8 flex text-secondary-gray">
+      <div className="max-w-7xl w-full h-full mx-auto flex my-auto">
         <div className="m-auto text-center w-full">
-          <p>
+          <p className="text-2xl">
             Welcome to <br />
-            <span className="text-primary-blue text-2xl font-semibold">
-              My Fitness Grow
+            <span className="text-4xl font-semibold">
+              My Fitness <span className="text-primary-blue">Grow</span>
             </span>
           </p>
           <div className="mt-12 flex justify-center flex-wrap w-full md:px-24 gap-x-12 px-8 gap-y-8">
@@ -55,12 +55,10 @@ const Welcome = () => {
             ))}
           </div>
           <div className="px-8 mt-12">
-          <button className="bg-white rounded-lg sm:w-64 min-w-64 w-full py-1.5 text-black">
-            Continue
-          </button>
-
+            <button className="bg-primary-blue rounded-lg sm:w-64 min-w-64 w-full py-1.5 text-white font-semibold text-lg">
+              Continue
+            </button>
           </div>
-          
         </div>
       </div>
     </div>
