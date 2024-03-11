@@ -1,5 +1,23 @@
 import FitPeople from "../assets/images/fitPeople.jpeg";
 
+const Module = ({ backgroundImage, description }) => {
+  return (
+    <div className="w-64 h-72 rounded-lg flex flex-col relative overflow-hidden border-gray-100 shadow-md">
+      <div
+        className="my-auto h-full flex"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+        }}
+      ></div>
+
+      <div className="bg-blue-500 w-full py-2 px-8">
+        <p>{description}</p>
+      </div>
+    </div>
+  );
+};
+
 const Welcome = () => {
   return (
     <div
@@ -15,21 +33,10 @@ const Welcome = () => {
             </span>
           </p>
           <div className="mt-12 flex justify-between gap-x-4">
-            <div className="w-64 h-72 rounded-lg flex flex-col relative overflow-hidden border-gray-100 shadow-md ">
-              <div
-                className="my-auto h-full flex"
-                style={{
-                  backgroundImage: `url(${FitPeople})`,
-                  backgroundSize: "cover",
-                }}
-              ></div>
-
-              <div className="bg-blue-500 w-full py-2 px-8">
-                <p >
-                  Ready for some Wins?  Start tracking, it is easy!
-                </p>
-              </div>
-            </div>
+            <Module
+              backgroundImage={FitPeople}
+              description="Ready for some Wins? Start tracking, it is easy!"
+            />
           </div>
         </div>
       </div>
