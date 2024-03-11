@@ -36,7 +36,7 @@ const Module = ({ backgroundImage, description }) => {
 
 const Welcome = () => {
   return (
-    <div className="my-auto h-full bg-blue-500 py-32 flex">
+    <div className="my-auto h-full bg-blue-500 lg:py-32 md:py-24 sm:py-12 py-8 flex">
       <div className="max-w-7xl bg-red-500 w-full text-white h-full mx-auto flex my-auto">
         <div className="m-auto text-center w-full">
           <p>
@@ -54,6 +54,13 @@ const Welcome = () => {
               />
             ))}
           </div>
+          <div className="px-8 mt-12">
+          <button className="bg-white rounded-lg sm:w-64 min-w-64 w-full py-1.5 text-black">
+            Continue
+          </button>
+
+          </div>
+          
         </div>
       </div>
     </div>
