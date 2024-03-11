@@ -26,6 +26,11 @@ const elements = [
         title: "example 3",
         description:"description for example 3"
     },
+    {
+        image: FitPeople,
+        title: "example 4",
+        description:"description for example 4"
+    },
 ]
 
 const styles = {
@@ -76,12 +81,12 @@ const Slide = ({ img, title, description, start }) => {
           </div>
           <div className="mb-4">
             {swiper.isEnd ? (
-              <Link
+              <a
                 className="rounded-full font-semibold flex bg-white py-1.5 justify-center text-[#334251] hover:text-[#334251] w-full"
-                to={start}
+                //to={start}
               >
                 Start
-              </Link>
+              </a>
             ) : (
               <a
                 onClick={() => swiper.slideNext()}
@@ -115,8 +120,8 @@ const Onboarding = ({ start }) => {
   return (
     <div style={{ overflow: "hidden" }}>
       <Swiper slidesPerView="auto" className="w-100 flex justify-around">
-        {elements.map((elements, elementsIndex) => (
-          <SwiperSlide key={elementsIndex}>
+        {elements.map((elements, index) => (
+          <SwiperSlide key={index}>
             <Slide
               //start={start}
               img={elements.image}
