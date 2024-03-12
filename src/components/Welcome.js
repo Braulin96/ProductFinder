@@ -1,5 +1,5 @@
-import FitPeople from "../assets/images/fitPeople.jpeg";
-import FitWoman from "../assets/images/fitWoman.webp";
+import FitPeople from "assets/images/fitPeople.jpeg";
+import FitWoman from "assets/images/fitWoman.webp";
 
 const welcomeData = [
   {

@@ -6,7 +6,7 @@ import "swiper/css";
 import { useSwiper } from "swiper/react";
 import { useSwiperSlide } from "swiper/react";
 import { FiChevronLeft } from "react-icons/fi";
-import FitPeople from "../../assets/images/fitPeople.jpeg";
+import FitPeople from "assets/images/fitPeople.jpeg";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -126,7 +126,7 @@ const Slide = ({ img, title, description, start, children }) => {
 const Onboarding = ({ start, children }) => {
   return (
     <div style={{ overflow: "hidden" }}>
-      <Swiper slidesPerView="auto" className="w-100 flex justify-around">
+      <Swiper slidesPerView="auto" className="w-full flex justify-around">
         {elements.map((elements, index) => (
           <SwiperSlide key={index}>
             <Slide
