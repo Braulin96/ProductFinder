@@ -26,15 +26,35 @@ const Questions = () => {
   };
 
   const GoalsImput = () => {
+    const answers = [
+      {
+        text: "Lose Weight",
+        value: 0,
+        id: "exerciseIntensity_sing",
+      },
+      {
+        text: "Maintain weight",
+        value: 1,
+        id: "exerciseIntensity_sentences",
+      },
+      {
+        text: "Gain muscle",
+        value: 2,
+        id: "exerciseIntensity_brokenSentences",
+      },
+    ];
     return (
-      <div className="">
-        <label className="text-xl"> Thanks {name} , Now your goals.</label>
-        <p>Select up to 3</p>
-        <input
-          placeholder="type your name..."
-          type="text"
-          className="mt-6 w-full rounded-lg border border-gray-400 px-4 py-2"
-        />
+      <div className="flex flex-col">
+        <label className="text-xl"> Thanks {name}! Now your goals.</label>
+        <p className="text-sm mt-2">Select one option that is better in your case.</p>
+        {answers.map((question) => (
+          <a
+            className="mt-4 border border-black p-4 w-full"
+            key={question.value}
+          >
+            {question.text}
+          </a>
+        ))}
       </div>
     );
   };
