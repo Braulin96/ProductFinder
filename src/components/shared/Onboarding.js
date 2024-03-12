@@ -10,28 +10,28 @@ import FitPeople from "assets/images/fitPeople.jpeg";
 
 SwiperCore.use([Navigation, Pagination]);
 
-const elements = [
-  {
-    image: FitPeople,
-    title: "What is your first name",
-    description: "description for example 1",
-  },
-  {
-    image: FitPeople,
-    title: "example 2",
-    description: "description for example 2",
-  },
-  {
-    image: FitPeople,
-    title: "example 3",
-    description: "description for example 3",
-  },
-  {
-    image: FitPeople,
-    title: "example 4",
-    description: "description for example 4",
-  },
-];
+// const elements = [
+//   {
+//     image: FitPeople,
+//     title: "What is your first name",
+//     description: "description for example 1",
+//   },
+//   {
+//     image: FitPeople,
+//     title: "example 2",
+//     description: "description for example 2",
+//   },
+//   {
+//     image: FitPeople,
+//     title: "example 3",
+//     description: "description for example 3",
+//   },
+//   {
+//     image: FitPeople,
+//     title: "example 4",
+//     description: "description for example 4",
+//   },
+// ];
 
 const styles = {
   slide: {
@@ -123,18 +123,18 @@ const Slide = ({ img, title, description, start, children }) => {
   );
 };
 
-const Onboarding = ({ start, children }) => {
+const Onboarding = ({ elements, start, children }) => {
   return (
     <div style={{ overflow: "hidden" }}>
       <Swiper slidesPerView="auto" className="w-full flex justify-around">
         {elements.map((elements, index) => (
           <SwiperSlide key={index}>
             <Slide
-            children={children}
+              children={elements.description}
               //start={start}
               img={elements.image}
-              title={elements.title}
-              description={elements.description}
+              //   title={elements.title}
+              //   description={elements.description}
             />
           </SwiperSlide>
         ))}
