@@ -32,7 +32,7 @@ const styles = {
   },
 };
 
-const Slide = ({ img, title, description, start, children }) => {
+const Slide = ({ img, children }) => {
   const swiper = useSwiper();
   const swiperSlide = useSwiperSlide();
   return (
