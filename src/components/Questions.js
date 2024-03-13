@@ -37,8 +37,6 @@ const Questions = () => {
     : null;
   const age = birthdayYear ? currentYear - birthdayYear : null;
 
-  console.log("age:", age);
-
   const NameImput = () => {
     return (
       <div className="">
