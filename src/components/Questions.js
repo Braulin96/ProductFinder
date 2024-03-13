@@ -1,16 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Onboarding from "./shared/Onboarding";
-import useQuestionsData from "./hooks/useQuestionsData";
 import FitPeople from "assets/images/fitPeople.jpeg";
-
-import dayjs from "dayjs";
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 const Questions = () => {
-  const { showNext, setShowNext } = useQuestionsData();
   const [name, setName] = useState("");
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -26,7 +22,6 @@ const Questions = () => {
   //sex:
   const [selectedSex, setSelectedSex] = useState(""); // State to store the selected sex
   //const [age, setAge]= useState(null)
-  // Function to handle changes in the selected sex
   const handleSexChange = (e) => {
     setSelectedSex(e.target.value); // Update the selected sex state
   };
@@ -134,9 +129,8 @@ const Questions = () => {
               <DemoItem label="Insert Your Birthday">
                 <DatePicker
                   label="Insert Your Birthday"
-                  value={selectedDate} // Set the selected date
-                  onChange={handleDateChange} // Handle date change event
-                  //renderInput={(params) => <TextField {...params} />}
+                  value={selectedDate}
+                  onChange={handleDateChange}
                 />
               </DemoItem>
             </DemoContainer>
@@ -147,16 +141,16 @@ const Questions = () => {
   };
 
   const elements = [
-    // {
-    //   image: FitPeople,
-    //   title: "",
-    //   description: NameImput(),
-    // },
-    // {
-    //   image: FitPeople,
-    //   title: "example 2",
-    //   description: GoalsImput(),
-    // },
+    {
+      image: FitPeople,
+      title: "",
+      description: NameImput(),
+    },
+    {
+      image: FitPeople,
+      title: "example 2",
+      description: GoalsImput(),
+    },
     {
       image: FitPeople,
       title: "example 3",
