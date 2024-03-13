@@ -1,5 +1,4 @@
-import Questions from "components/Questions";
-import Welcome from "components/Welcome";
+
 import { Outlet } from "react-router-dom";
 
 

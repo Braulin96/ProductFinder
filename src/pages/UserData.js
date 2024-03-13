@@ -1,7 +1,7 @@
 //hooks:
 import { useState } from "react";
 //components:
-import Onboarding from "./shared/Onboarding";
+import Onboarding from "../components/shared/Onboarding";
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
@@ -9,7 +9,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
 
-const Questions = () => {
+const UserData = () => {
   //State variables
   const [name, setName] = useState("");
   const [selectedOption, setSelectedOption] = useState(null);
@@ -132,4 +132,4 @@ const Questions = () => {
   ];
   return <Onboarding elements={elements} />;
 };
-export default Questions;
+export default UserData;

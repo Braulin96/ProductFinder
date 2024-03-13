@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import FitPeople from "assets/images/fitPeople.jpeg";
 import FitWoman from "assets/images/fitWoman.webp";
 
-const welcomeData = [
+const moduleData = [
   {
     image: FitPeople,
     description: "Ready for some Wins? Start tracking, it is easy!",
@@ -37,7 +37,7 @@ const Module = ({ backgroundImage, description }) => {
   );
 };
 
-const Welcome = () => {
+const Home = () => {
   return (
     <div className="my-auto h-full bg-tertiary-gray lg:py-32 md:py-24 sm:py-12 py-8 flex text-secondary-gray">
       <div className="max-w-7xl w-full h-full mx-auto flex my-auto">
@@ -49,7 +49,7 @@ const Welcome = () => {
             </span>
           </p>
           <div className="mt-12 flex justify-center flex-wrap w-full md:px-24 gap-x-12 px-8 gap-y-8">
-            {welcomeData.map((data, index) => (
+            {moduleData.map((data, index) => (
               <Module
                 key={index}
                 backgroundImage={data.image}
@@ -59,7 +59,7 @@ const Welcome = () => {
           </div>
           <div className="px-8 mt-12">
             <Link
-              to="contact"
+              to="questions"
               className="bg-primary-blue rounded-lg sm:w-64 min-w-64 w-full py-1.5 text-white font-semibold text-lg"
             >
               Continue
@@ -70,4 +70,4 @@ const Welcome = () => {
     </div>
   );
 };
-export default Welcome;
+export default Home;

@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Welcome from "components/Welcome";
+import Home from "pages/Home";
 import Contact from "components/Contact";
-import ErrorPage from "components/ErrorPage";
+import UserData from "pages/UserData";
+import ErrorPage from "pages/ErrorPage";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // const router = createBrowserRouter([
@@ -26,11 +27,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Welcome />,
+        element: <Home />,
       },
       {
-        path: "contact",
-        element: <Contact />,
+        path: "questions",
+        element: <UserData />,
       },
     ],
   },
