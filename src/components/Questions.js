@@ -7,37 +7,29 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 const Questions = () => {
+  //State variables
   const [name, setName] = useState("");
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  //GoalsImput:
   const [selectedOption, setSelectedOption] = useState(null);
-  const handleOptionChange = (value) => {
-    setSelectedOption(value);
-  };
+  const [selectedSex, setSelectedSex] = useState("");
 
-  //-----------------Personal Data
-  //sex:
-  const [selectedSex, setSelectedSex] = useState(""); // State to store the selected sex
-  //const [age, setAge]= useState(null)
-  const handleSexChange = (e) => {
-    setSelectedSex(e.target.value); // Update the selected sex state
-  };
-  //DOB
+  // Event handlers
+  const handleNameChange = (e) => setName(e.target.value);
+  const handleOptionChange = (value) => setSelectedOption(value);
+  const handleSexChange = (e) => setSelectedSex(e.target.value);
+
+  //Calculate DOB
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
-  const [selectedDate, setSelectedDate] = useState(null); // State to store the selected date
+  const [selectedDate, setSelectedDate] = useState(null);
   const handleDateChange = (date) => {
-    setSelectedDate(date); // Update the selected date state
+    setSelectedDate(date);
   };
   const birthdayYear = selectedDate
     ? new Date(selectedDate).getFullYear()
     : null;
   const age = birthdayYear ? currentYear - birthdayYear : null;
 
-  const NameImput = () => {
+  const UserName = () => {
     return (
       <div className="">
         <label className="text-xl"> What is you first name</label>
@@ -52,23 +44,11 @@ const Questions = () => {
     );
   };
 
-  const GoalsImput = () => {
+  const Goals = () => {
     const answers = [
-      {
-        text: "Lose Weight",
-        value: 0,
-        id: "exerciseIntensity_sing",
-      },
-      {
-        text: "Maintain weight",
-        value: 1,
-        id: "exerciseIntensity_sentences",
-      },
-      {
-        text: "Gain muscle",
-        value: 2,
-        id: "exerciseIntensity_brokenSentences",
-      },
+      { text: "Lose Weight", value: 0 },
+      { text: "Maintain weight", value: 1 },
+      { text: "Gain muscle", value: 2 },
     ];
 
     return (
@@ -105,8 +85,8 @@ const Questions = () => {
             <input
               type="radio"
               value="male"
-              checked={selectedSex === "male"} // Set checked based on selected sex
-              onChange={handleSexChange} // Handle change event
+              checked={selectedSex === "male"}
+              onChange={handleSexChange}
               className="form-radio h-5 w-5 text-blue-600"
             />
             <span className="ml-2">Male</span>
@@ -115,8 +95,8 @@ const Questions = () => {
             <input
               type="radio"
               value="female"
-              checked={selectedSex === "female"} // Set checked based on selected sex
-              onChange={handleSexChange} // Handle change event
+              checked={selectedSex === "female"}
+              onChange={handleSexChange}
               className="form-radio h-5 w-5 text-pink-600"
             />
             <span className="ml-2">Female</span>
@@ -134,28 +114,19 @@ const Questions = () => {
             </DemoContainer>
           </LocalizationProvider>
         </div>
+        <p>
+          my name is {name} I want {selectedOption} I am a {selectedSex} and I
+          am {age} years
+        </p>
       </div>
     );
   };
 
   const elements = [
-    {
-      image: FitPeople,
-      title: "",
-      description: NameImput(),
-    },
-    {
-      image: FitPeople,
-      title: "example 2",
-      description: GoalsImput(),
-    },
-    {
-      image: FitPeople,
-      title: "example 3",
-      description: PersonalData(),
-    },
+    { image: FitPeople, description: UserName() },
+    { image: FitPeople, description: Goals() },
+    { image: FitPeople, description: PersonalData() },
   ];
-
   return <Onboarding elements={elements} />;
 };
 
