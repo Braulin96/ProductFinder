@@ -22,13 +22,20 @@ const Questions = () => {
     setSelectedOption(value);
   };
 
-  //Personal Data
+  //-----------------Personal Data
   //sex:
   const [selectedSex, setSelectedSex] = useState(""); // State to store the selected sex
   // Function to handle changes in the selected sex
   const handleSexChange = (e) => {
     setSelectedSex(e.target.value); // Update the selected sex state
   };
+  //DOB
+  const [selectedDate, setSelectedDate] = useState(null); // State to store the selected date
+  const handleDateChange = (date) => {
+    setSelectedDate(date); // Update the selected date state
+  };
+
+  console.log('selectedDate:',selectedDate)
 
   const NameImput = () => {
     return (
@@ -117,8 +124,13 @@ const Questions = () => {
 
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={["DatePicker"]}>
-              <DemoItem label="Desktop variant">
-                <DatePicker  />
+              <DemoItem label="Insert Your Birthday">
+                <DatePicker
+                  label="Insert Your Birthday"
+                  value={selectedDate} // Set the selected date
+                  onChange={handleDateChange} // Handle date change event
+                  //renderInput={(params) => <TextField {...params} />}
+                />
               </DemoItem>
             </DemoContainer>
           </LocalizationProvider>
