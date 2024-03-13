@@ -1,38 +1,14 @@
+//components:
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
-import { Link } from "react-router-dom";
 import "swiper/css";
 import { useSwiper } from "swiper/react";
 import { useSwiperSlide } from "swiper/react";
+//icons:
 import { FiChevronLeft } from "react-icons/fi";
-import FitPeople from "assets/images/fitPeople.jpeg";
 
 SwiperCore.use([Navigation, Pagination]);
-
-// const elements = [
-//   {
-//     image: FitPeople,
-//     title: "What is your first name",
-//     description: "description for example 1",
-//   },
-//   {
-//     image: FitPeople,
-//     title: "example 2",
-//     description: "description for example 2",
-//   },
-//   {
-//     image: FitPeople,
-//     title: "example 3",
-//     description: "description for example 3",
-//   },
-//   {
-//     image: FitPeople,
-//     title: "example 4",
-//     description: "description for example 4",
-//   },
-// ];
-
 const styles = {
   slide: {
     backgroundColor: "white",
@@ -74,15 +50,6 @@ const Slide = ({ img, title, description, start, children }) => {
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
           <div className="font-medium h-full flex">
             <div className="bg-white bg-opacity-80 m-auto w-full aspect-square rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray">
-              {/* <h2
-                className="pb-2"
-                style={{ fontSize: "1.6rem"}}
-              >
-                {title}
-              </h2>
-              <p style={{ fontSize: "1.1rem"}}>
-                {description}
-              </p> */}
               {children}
             </div>
           </div>
@@ -129,13 +96,7 @@ const Onboarding = ({ elements, start, children }) => {
       <Swiper slidesPerView="auto" className="w-full flex justify-around">
         {elements.map((elements, index) => (
           <SwiperSlide key={index}>
-            <Slide
-              children={elements.description}
-              //start={start}
-              img={elements.image}
-              //   title={elements.title}
-              //   description={elements.description}
-            />
+            <Slide children={elements.description} img={elements.image} />
           </SwiperSlide>
         ))}
       </Swiper>
