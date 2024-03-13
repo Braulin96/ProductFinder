@@ -1,3 +1,5 @@
+//components:
+import { Link } from "react-router-dom";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
 import FitWoman from "assets/images/fitWoman.webp";
@@ -56,9 +58,12 @@ const Welcome = () => {
             ))}
           </div>
           <div className="px-8 mt-12">
-            <button className="bg-primary-blue rounded-lg sm:w-64 min-w-64 w-full py-1.5 text-white font-semibold text-lg">
+            <Link
+              to="contact"
+              className="bg-primary-blue rounded-lg sm:w-64 min-w-64 w-full py-1.5 text-white font-semibold text-lg"
+            >
               Continue
-            </button>
+            </Link>
           </div>
         </div>
       </div>

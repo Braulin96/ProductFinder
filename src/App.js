@@ -1,12 +1,13 @@
 import Questions from "components/Questions";
 import Welcome from "components/Welcome";
+import { Outlet } from "react-router-dom";
+
 
 function App() {
   return (
     <div className="App text-red-500">
-      <Welcome />
-      {/* <Onboarding/> */}
-      <Questions/>
+      <p>test</p>
+      <Outlet />
     </div>
   );
 }
