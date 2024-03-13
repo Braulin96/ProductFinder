@@ -1,10 +1,8 @@
-
 import { Outlet } from "react-router-dom";
-
 
 function App() {
   return (
-    <div className="App text-red-500">
+    <div className="App">
       <p>test</p>
       <Outlet />
     </div>

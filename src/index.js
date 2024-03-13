@@ -6,32 +6,27 @@ import Home from "pages/Home";
 import Contact from "components/Contact";
 import UserData from "pages/UserData";
 import ErrorPage from "pages/ErrorPage";
+import Dashboard from "pages/Dashboard";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// const router = createBrowserRouter([
-//   {
-//     path: "",
-//     element: <Welcome/>
-//   },
-//   {
-//     path: "contact",
-//     element: <Contact/>
-//   }
-// ])
 
 const router = createBrowserRouter([
   {
     path: "",
     element: <App />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
         element: <Home />,
       },
       {
-        path: "questions",
+        path: "/questions",
         element: <UserData />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
     ],
   },

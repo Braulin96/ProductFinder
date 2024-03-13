@@ -5,6 +5,7 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import { useSwiper } from "swiper/react";
 import { useSwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 //icons:
 import { FiChevronLeft } from "react-icons/fi";
 
@@ -55,12 +56,13 @@ const Slide = ({ img, children }) => {
           </div>
           <div className="mt-auto">
             {swiper.isEnd ? (
-              <a
+              <Link 
+              to ='dashboard'
                 className="rounded-full font-semibold flex bg-white py-1.5 justify-center text-[#334251] hover:text-[#334251] w-full"
                 //to={start}
               >
                 Start
-              </a>
+              </Link>
             ) : (
               <a
                 onClick={() => swiper.slideNext()}
