@@ -1,3 +1,4 @@
+//images:
 import FitPeople from "assets/images/fitPeople.jpeg";
 import FitWoman from "assets/images/fitWoman.webp";
 

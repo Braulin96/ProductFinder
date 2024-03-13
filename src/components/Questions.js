@@ -1,10 +1,13 @@
+//hooks:
 import { useState } from "react";
+//components:
 import Onboarding from "./shared/Onboarding";
-import FitPeople from "assets/images/fitPeople.jpeg";
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+//images:
+import FitPeople from "assets/images/fitPeople.jpeg";
 
 const Questions = () => {
   //State variables
@@ -129,5 +132,4 @@ const Questions = () => {
   ];
   return <Onboarding elements={elements} />;
 };
-
 export default Questions;
