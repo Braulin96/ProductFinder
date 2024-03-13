@@ -12,12 +12,12 @@ import FitPeople from "assets/images/fitPeople.jpeg";
 const UserData = () => {
   //State variables
   const [name, setName] = useState("");
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [goal, setGoal] = useState(null);
   const [selectedSex, setSelectedSex] = useState("");
 
   // Event handlers
   const handleNameChange = (e) => setName(e.target.value);
-  const handleOptionChange = (value) => setSelectedOption(value);
+  const handleOptionChange = (value) => setGoal(value);
   const handleSexChange = (e) => setSelectedSex(e.target.value);
 
   //Calculate DOB
@@ -69,7 +69,7 @@ const UserData = () => {
               type="radio"
               name="goal"
               value={answer.text}
-              checked={selectedOption === answer.text}
+              checked={goal === answer.text}
               onChange={() => handleOptionChange(answer.text)}
             />
             {answer.text}
@@ -118,7 +118,7 @@ const UserData = () => {
           </LocalizationProvider>
         </div>
         <p>
-          my name is {name} I want {selectedOption} I am a {selectedSex} and I
+          my name is {name} I want {goal} I am a {selectedSex} and I
           am {age} years
         </p>
       </div>
