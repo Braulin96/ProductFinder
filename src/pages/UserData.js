@@ -13,12 +13,12 @@ const UserData = () => {
   //State variables
   const [name, setName] = useState("");
   const [goal, setGoal] = useState(null);
-  const [selectedSex, setSelectedSex] = useState("");
+  const [sex, setSex] = useState("");
 
   // Event handlers
   const handleNameChange = (e) => setName(e.target.value);
   const handleOptionChange = (value) => setGoal(value);
-  const handleSexChange = (e) => setSelectedSex(e.target.value);
+  const handleSexChange = (e) => setSex(e.target.value);
 
   //Calculate DOB
   const currentDate = new Date();
@@ -88,7 +88,7 @@ const UserData = () => {
             <input
               type="radio"
               value="male"
-              checked={selectedSex === "male"}
+              checked={sex === "male"}
               onChange={handleSexChange}
               className="form-radio h-5 w-5 text-blue-600"
             />
@@ -98,7 +98,7 @@ const UserData = () => {
             <input
               type="radio"
               value="female"
-              checked={selectedSex === "female"}
+              checked={sex === "female"}
               onChange={handleSexChange}
               className="form-radio h-5 w-5 text-pink-600"
             />
@@ -118,7 +118,7 @@ const UserData = () => {
           </LocalizationProvider>
         </div>
         <p>
-          my name is {name} I want {goal} I am a {selectedSex} and I
+          my name is {name} I want {goal} I am a {sex} and I
           am {age} years
         </p>
       </div>
