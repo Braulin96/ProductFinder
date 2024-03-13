@@ -25,17 +25,24 @@ const Questions = () => {
   //-----------------Personal Data
   //sex:
   const [selectedSex, setSelectedSex] = useState(""); // State to store the selected sex
+  //const [age, setAge]= useState(null)
   // Function to handle changes in the selected sex
   const handleSexChange = (e) => {
     setSelectedSex(e.target.value); // Update the selected sex state
   };
   //DOB
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
   const [selectedDate, setSelectedDate] = useState(null); // State to store the selected date
   const handleDateChange = (date) => {
     setSelectedDate(date); // Update the selected date state
   };
+  const birthdayYear = selectedDate
+    ? new Date(selectedDate).getFullYear()
+    : null;
+  const age = birthdayYear ? currentYear - birthdayYear : null;
 
-  console.log('selectedDate:',selectedDate)
+  console.log("age:", age);
 
   const NameImput = () => {
     return (
@@ -140,16 +147,16 @@ const Questions = () => {
   };
 
   const elements = [
-    {
-      image: FitPeople,
-      title: "",
-      description: NameImput(),
-    },
-    {
-      image: FitPeople,
-      title: "example 2",
-      description: GoalsImput(),
-    },
+    // {
+    //   image: FitPeople,
+    //   title: "",
+    //   description: NameImput(),
+    // },
+    // {
+    //   image: FitPeople,
+    //   title: "example 2",
+    //   description: GoalsImput(),
+    // },
     {
       image: FitPeople,
       title: "example 3",
