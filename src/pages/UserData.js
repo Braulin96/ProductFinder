@@ -122,7 +122,7 @@ const UserData = () => {
   return (
     <div>
       <Onboarding elements={elements} />
-      <Dashboard/>
+      {/* <Dashboard/> */}
     </div>
   );
 };

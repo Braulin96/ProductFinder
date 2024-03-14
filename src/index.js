@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Home from "pages/Home";
+import Landing from "pages/Landing";
 import Contact from "components/Contact";
 import UserData from "pages/UserData";
 import ErrorPage from "pages/ErrorPage";
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: <Landing />,
       },
       {
         path: "/questions",

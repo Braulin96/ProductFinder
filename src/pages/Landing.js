@@ -37,7 +37,7 @@ const Module = ({ backgroundImage, description }) => {
   );
 };
 
-const Home = () => {
+const Landing = () => {
   return (
     <div className="my-auto h-full bg-tertiary-gray lg:py-32 md:py-24 sm:py-12 py-8 flex text-secondary-gray">
       <div className="max-w-7xl w-full h-full mx-auto flex my-auto">
@@ -70,4 +70,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home;
+export default Landing;
