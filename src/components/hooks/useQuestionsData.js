@@ -5,9 +5,7 @@ const useQuestionsData = () => {
   const initialName = localStorage.getItem("name") || "";
   const initialGoal = localStorage.getItem("goal") || null;
   const initialSex = localStorage.getItem("sex") || "";
-  // const initialSelectedDate = localStorage.getItem("selectedDate")
-  //   ? new Date(localStorage.getItem("selectedDate"))
-  //   : null;
+  const initialAge = localStorage.getItem("age") || null;
 
   // State variables
   const [name, setName] = useState(initialName);
@@ -35,26 +33,18 @@ const useQuestionsData = () => {
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
-    localStorage.setItem("selectedDate", date);
+    const currentYear = new Date().getFullYear();
+    const birthdayYear = date ? new Date(date).getFullYear() : null;
+    const age = birthdayYear ? currentYear - birthdayYear : null;
+    localStorage.setItem("age", age);
   };
 
   // Calculate age based on selected date
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  const birthdayYear = selectedDate
-    ? new Date(selectedDate).getFullYear()
-    : null;
-  const age = birthdayYear ? currentYear - birthdayYear : null;
-
   useEffect(() => {
-    // Update local storage whenever state changes
-    localStorage.setItem("name", name);
-    localStorage.setItem("goal", goal);
-    localStorage.setItem("sex", sex);
     if (selectedDate) {
-      localStorage.setItem("selectedDate", selectedDate.toISOString());
+      handleDateChange(selectedDate);
     }
-  }, [name, goal, sex, age]);
+  }, [selectedDate]);
 
   return {
     name,
@@ -63,7 +53,7 @@ const useQuestionsData = () => {
     handleNameChange,
     handleOptionChange,
     handleSexChange,
-    age,
+    age: initialAge,
     selectedDate,
     handleDateChange,
   };
