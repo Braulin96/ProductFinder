@@ -17,6 +17,10 @@ const DataConfirm = () => {
     navigate("/questions");
   };
 
+  const handleDashboard = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div>
       <p>
@@ -26,16 +30,16 @@ const DataConfirm = () => {
         Is that right?
         <div className="flex">
           <button
-            onClick={handleCleaning}
-            className="p-4 rounded-lg border-2 border-black"
-          >
-            Restart
-          </button>
-          <button
             onClick={handleEdit}
             className="p-4 rounded-lg border-2 border-black"
           >
             Edit
+          </button>
+          <button
+            onClick={handleDashboard}
+            className="p-4 rounded-lg border-2 border-black"
+          >
+            Confirm
           </button>
         </div>
       </div>
