@@ -10,6 +10,7 @@ import useQuestionsData from "components/hooks/useQuestionsData";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
 import Dashboard from "./Dashboard";
+import { useData } from "components/hooks/DataContext";
 
 const UserData = () => {
   const {
@@ -22,7 +23,7 @@ const UserData = () => {
     selectedDate,
     handleDateChange,
     age,
-  } = useQuestionsData();
+  } = useData();
 
   const UserName = () => {
     return (
@@ -124,7 +125,7 @@ const UserData = () => {
   return (
     <div>
       <Onboarding elements={elements} />
-      <Dashboard />
+      <Dashboard/>
     </div>
   );
 };
