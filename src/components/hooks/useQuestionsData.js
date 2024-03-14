@@ -19,18 +19,19 @@ const useQuestionsData = () => {
     setName(newName);
     localStorage.setItem("name", newName);
   };
-  
+
   const handleOptionChange = (value) => {
     setGoal(value);
     localStorage.setItem("goal", value);
   };
-  
+
   const handleSexChange = (e) => {
     const newSex = e.target.value;
     setSex(newSex);
     localStorage.setItem("sex", newSex);
   };
 
+  // Calculate age based on selected date
   const handleDateChange = (date) => {
     setSelectedDate(date);
     const currentYear = new Date().getFullYear();
@@ -39,7 +40,6 @@ const useQuestionsData = () => {
     localStorage.setItem("age", age);
   };
 
-  // Calculate age based on selected date
   useEffect(() => {
     if (selectedDate) {
       handleDateChange(selectedDate);
@@ -50,17 +50,15 @@ const useQuestionsData = () => {
     name,
     goal,
     sex,
-    
+    age: initialAge,
+    selectedDate,
     setName,
     setGoal,
     setSex,
     setSelectedDate,
-
     handleNameChange,
     handleOptionChange,
     handleSexChange,
-    age: initialAge,
-    selectedDate,
     handleDateChange,
   };
 };

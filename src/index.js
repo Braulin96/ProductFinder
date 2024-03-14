@@ -6,7 +6,7 @@ import Home from "pages/Home";
 import Contact from "components/Contact";
 import UserData from "pages/UserData";
 import ErrorPage from "pages/ErrorPage";
-import Dashboard from "pages/Dashboard";
+import DataConfirm from "pages/DataConfirm";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
         element: <UserData />,
       },
       {
-        path: "/dashboard",
-        element: <Dashboard />,
+        path: "/confirm",
+        element: <DataConfirm />,
       },
     ],
   },

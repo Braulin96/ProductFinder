@@ -1,15 +1,12 @@
-//hooks:
-import { useState } from "react";
 //components:
 import Onboarding from "../components/shared/Onboarding";
 import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import useQuestionsData from "components/hooks/useQuestionsData";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
-import Dashboard from "./Dashboard";
+import Dashboard from "./DataConfirm";
 import { useData } from "components/hooks/DataContext";
 
 const UserData = () => {
