@@ -1,11 +1,17 @@
 import useQuestionsData from "components/hooks/useQuestionsData";
 import { useData } from "components/hooks/DataContext";
+import { useEffect } from "react";
 
 const Dashboard = () => {
-  const { name, goal, sex, age } = useData();
-  const cleanLocalStorage = () => {
+  const { name, goal, sex, age, setName, setGoal, setSex } = useData();
+
+  const handleCleaning = () => {
     localStorage.clear();
+    setName("");
+    setGoal(null);
+    setSex("");
   };
+
   return (
     <div>
       <p>
@@ -15,7 +21,7 @@ const Dashboard = () => {
         Is that right?
         <div className="flex">
           <button
-            onClick={cleanLocalStorage}
+            onClick={handleCleaning}
             className="p-4 rounded-lg border-2 border-black"
           >
             Clear Data

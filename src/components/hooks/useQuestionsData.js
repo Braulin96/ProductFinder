@@ -50,6 +50,12 @@ const useQuestionsData = () => {
     name,
     goal,
     sex,
+    
+    setName,
+    setGoal,
+    setSex,
+    setSelectedDate,
+
     handleNameChange,
     handleOptionChange,
     handleSexChange,
