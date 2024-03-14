@@ -9,11 +9,20 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import useQuestionsData from "components/hooks/useQuestionsData";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
-
+import Dashboard from "./Dashboard";
 
 const UserData = () => {
- 
-  const {name, handleNameChange, goal, handleOptionChange, sex, handleSexChange, selectedDate, handleDateChange, age} = useQuestionsData();
+  const {
+    name,
+    handleNameChange,
+    goal,
+    handleOptionChange,
+    sex,
+    handleSexChange,
+    selectedDate,
+    handleDateChange,
+    age,
+  } = useQuestionsData();
 
   const UserName = () => {
     return (
@@ -101,8 +110,7 @@ const UserData = () => {
           </LocalizationProvider>
         </div>
         <p>
-          my name is {name} I want {goal} I am a {sex} and I
-          am {age} years
+          my name is {name} I want {goal} I am a {sex} and I am {age} years
         </p>
       </div>
     );
@@ -113,6 +121,11 @@ const UserData = () => {
     { image: FitPeople, description: Goals() },
     { image: FitPeople, description: PersonalData() },
   ];
-  return <Onboarding elements={elements} />;
+  return (
+    <div>
+      <Onboarding elements={elements} />
+      <Dashboard />
+    </div>
+  );
 };
 export default UserData;

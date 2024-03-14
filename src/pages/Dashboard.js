@@ -1,6 +1,11 @@
-import React from "react";
+import useQuestionsData from "components/hooks/useQuestionsData";
 
 const Dashboard = () => {
-  return <div>Here goes all the data</div>;
+  const { name, goal, sex, age } = useQuestionsData();
+  return (
+    <div>
+      My name is {name} I am {sex}, I am {age} years old and I want {goal}
+    </div>
+  );
 };
 export default Dashboard;
