@@ -8,6 +8,7 @@ import UserData from "pages/UserData";
 import ErrorPage from "pages/ErrorPage";
 import DataConfirm from "pages/DataConfirm";
 import Dashboard from "pages/Dashboard"
+import ApisTest from "./components/shared/ApisTest.js"
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/api",
+        element: <ApisTest />,
       },
     ],
   },

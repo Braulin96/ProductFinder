@@ -3,40 +3,15 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const Dashboard = () => {
-  //const [items, setItems] = useState([]);
-
-  const [randomImage, setRandomImage] = useState("");
-  const [time, setTime] = useState("");
-
-  const fetchRandomImage = async () => {
-    try {
-      const response = await fetch("https://source.unsplash.com/random");
-      // Get the final URL after any redirects (actual image URL)
-      const imageUrl = response.url;
-      setRandomImage(imageUrl);
-    } catch (error) {
-      console.error("Error fetching random image:", error);
-    }
-  };
-  useEffect(() => {
-    fetchRandomImage();
-  }, [time]);
-
   const { name, goal, sex, age } = useData();
+  //const [items, setItems] = useState([]);
+  //const response = await fetch("https://source.unsplash.com/random");
+
+ fetch('https://reqres.in/api/users').then(res => res.json()).then((data)=>console.log(data)) // converter dados para json type
+
   return (
     <div>
-      Hello {name} welcome to your dashboard app where you can, you are a {sex}{" "}
-      with {age} years olt trying to {goal}
-      <div className="w-96 h-96 rounded-full bg-cover overflow-hidden mt-12">
-        {randomImage && (
-          <img
-            className="w-full h-full object-cover"
-            src={randomImage}
-            alt="Random"
-          />
-        )}
-        {!randomImage && <p className="text-black">Loading random image...</p>}
-      </div>
+      Hello {name}
     </div>
   );
 };
