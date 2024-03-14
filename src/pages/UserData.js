@@ -6,31 +6,14 @@ import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import useQuestionsData from "components/hooks/useQuestionsData";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
 
+
 const UserData = () => {
-  //State variables
-  const [name, setName] = useState("");
-  const [goal, setGoal] = useState(null);
-  const [sex, setSex] = useState("");
-
-  // Event handlers
-  const handleNameChange = (e) => setName(e.target.value);
-  const handleOptionChange = (value) => setGoal(value);
-  const handleSexChange = (e) => setSex(e.target.value);
-
-  //Calculate DOB
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  const [selectedDate, setSelectedDate] = useState(null);
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-  const birthdayYear = selectedDate
-    ? new Date(selectedDate).getFullYear()
-    : null;
-  const age = birthdayYear ? currentYear - birthdayYear : null;
+ 
+  const {name, handleNameChange, goal, handleOptionChange, sex, handleSexChange, selectedDate, handleDateChange, age} = useQuestionsData();
 
   const UserName = () => {
     return (
