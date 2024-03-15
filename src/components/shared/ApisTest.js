@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios"
 
 function ApisTest() {
   const [users, setUsers] = useState([]);
@@ -18,6 +19,22 @@ function ApisTest() {
     };
     fetchUsers();
   }, []);
+
+  //with axios:
+//   useEffect(() => {
+//     const fetchUsers = async () => {
+//       try {
+//         const response = await axios.get("https://reqres.in/api/users");
+//         if (response.status !== 200) {
+//           throw new Error("Failed to fetch users");
+//         }
+//         setUsers(response.data.data);
+//       } catch (error) {
+//         console.error("Error fetching users:", error);
+//       }
+//     };
+//     fetchUsers();
+//   }, []);
 
   return (
     <div>
