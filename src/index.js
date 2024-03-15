@@ -9,6 +9,7 @@ import ErrorPage from "pages/ErrorPage";
 import DataConfirm from "pages/DataConfirm";
 import Dashboard from "pages/Dashboard"
 import ApisTest from "./components/shared/ApisTest.js"
+import ApiReact from "components/shared/ApiReact";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/api",
-        element: <ApisTest />,
+        element: <ApiReact />,
       },
     ],
   },
