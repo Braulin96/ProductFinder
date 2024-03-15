@@ -7,9 +7,10 @@ import Contact from "components/Contact";
 import UserData from "pages/UserData";
 import ErrorPage from "pages/ErrorPage";
 import DataConfirm from "pages/DataConfirm";
-import Dashboard from "pages/Dashboard"
-import ApisTest from "./components/shared/ApisTest.js"
+import Dashboard from "pages/Dashboard";
+import ApisTest from "./components/shared/ApisTest.js";
 import ApiReact from "components/shared/ApiReact";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -43,9 +44,13 @@ const router = createBrowserRouter([
   },
 ]);
 
+const client = new QueryClient();
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={client}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </React.StrictMode>
 );
