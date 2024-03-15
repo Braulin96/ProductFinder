@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function ApisTest() {
-  fetch("https://reqres.in/api/users/1000")
-    .then((res) => {
-      if (res.ok) {
-        return res.json(); // convert to JSON and return
-      } else {
-        console.log("Unsuccess");
-        //throw new Error("Unsuccessful request"); 
-      }
-    })
-    .then((data) => {
-      console.log(data); // log the JSON data
-      // console.log(data.data[0].first_name); // to get the data inside the 'data' property at position 0 and then 'first_name'
-    })
-    .catch((err) => console.log(err)); // will only execute if there's an error during the network request itself 
+  const [users, setUsers] = useState([]);
 
-  return <div>ApisTest</div>;
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch("https://reqres.in/api/users");
+        if (!response.ok) {
+          throw new Error("Failed to fetch users");
+        }
+        const data = await response.json();
+        setUsers(data.data);
+      } catch (error) {
+        console.error("Error fetching users:", error);
+      }
+    };
+    fetchUsers();
+  }, []);
+
+  return (
+    <div>
+      {users.map((user) => (
+        <div key={user.id}>
+          <p>
+            {user.first_name} {user.last_name}
+          </p>
+          <p> Email: {user.email}</p>
+          <img src={user.avatar} alt="Avatar" />
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default ApisTest;
