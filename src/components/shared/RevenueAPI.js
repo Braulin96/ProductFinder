@@ -24,6 +24,7 @@ function ApiReact() {
           <p>Brand:{recipe.brand}</p>
           <p>Nome: {recipe.title}</p>
           <p>Price: {recipe.price}</p>
+          <p>Category: {recipe.category}</p>
           <div>
             {recipe.images.map((image, index) => (
               <img key={index} src={image} alt={`Image ${index}`} />

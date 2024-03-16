@@ -9,7 +9,8 @@ const useRevenueData = () => {
 
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get(`https://dummyjson.com/products/category/${name}`); 
+      //const response = await axios.get(`https://dummyjson.com/products/category/${name}`);
+      const response = await axios.get(`https://dummyjson.com/products`) 
       console.log("Response:", response);
       return response.data.products;
     } catch (error) {
