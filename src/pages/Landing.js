@@ -30,10 +30,10 @@ const elements = [
 const Landing = () => {
   return (
     <div
-      className="flex flex-col items-center bg-gray-100 relative"
+      className="flex flex-col items-center bg-gray-100 relative sm:px-4"
       style={{ height: "100vh" }}
     >
-      <div className="my-auto md:px-12 py-12 rounded-3xl w-full max-w-7xl mx-auto flex md:flex-row flex-col gap-y-8 z-20 bg-gray-50 bg-opacity-60 shadow-xl gap-x-4 px-4">
+      <div className="my-auto md:px-12 py-12 rounded-3xl w-full max-w-7xl mx-auto flex md:flex-row flex-col gap-y-8 z-20 bg-gray-50 bg-opacity-60 shadow-xl gap-x-4">
         <div className="md:w-1/2 w-full h-full text-center flex flex-col sm:gap-y-8 gap-y-4 text-gray-800 my-auto justify-center">
           <h1 className="sm:text-4xl text-3xl">
             Welcome to
@@ -47,9 +47,9 @@ const Landing = () => {
             smartwatches. Explore our collection and find the perfect product to
             suit your needs.
           </p>
-          <button className="hidden md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-sage text-white font-bold mt-4">
+          <Link to ='questions' className="hidden md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-sage text-white font-bold mt-4">
             Let's Start
-          </button>
+          </Link>
         </div>
         <div className="md:w-1/2 w-full h-full flex">
           <Swiper
@@ -77,9 +77,12 @@ const Landing = () => {
             ))}
           </Swiper>
         </div>
-        <button className="md:hidden flex px-24 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-sage text-white font-bold ">
+        <Link
+           to ='questions'
+          className="md:hidden flex px-24 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-sage text-white font-bold "
+        >
           <p className="mx-auto"> Let's Start</p>
-        </button>
+        </Link>
       </div>
       <div className="absolute z-10 h-full md:flex hidden">
         <img style={{ height: "100vh", opacity: "0.6" }} src={Woman} />
