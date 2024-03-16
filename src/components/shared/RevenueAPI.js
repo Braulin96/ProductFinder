@@ -3,6 +3,7 @@ import useRevenueData from "./useRevenueData";
 
 function ApiReact() {
   const { data, isLoading, isError } = useRevenueData();
+  console.log("data:", data);
   // isLoading and isError you do not need to declare, automatically from react-query
 
   if (isLoading) {
@@ -15,13 +16,11 @@ function ApiReact() {
   return (
     <div>
       <h2>API React</h2>
-      {data.map((user) => (
-        <div className="mt-8" key={user.id}>
-          <p>
-            {user.first_name} {user.last_name}
-          </p>
-          <p>Email: {user.email}</p>
-          <img src={user.avatar} alt="Avatar" />
+      {data.map((recipe) => (
+        <div className="mt-8" key={recipe.title}>
+          <p>{recipe.id}</p>
+          <p>Nome: {recipe.title}</p>
+          <img src={recipe.image} alt="Avatar" />
         </div>
       ))}
     </div>
