@@ -29,7 +29,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     background: "#00000020",
-    background: "#f3f4f6",
+    background: "black",
   },
 };
 

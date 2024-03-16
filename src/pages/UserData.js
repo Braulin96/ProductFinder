@@ -9,6 +9,8 @@ import FitPeople from "assets/images/fitPeople.jpeg";
 import Dashboard from "./DataConfirm";
 import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/secondWomen.jpeg";
+import Fragrances from "assets/images/fragrances.jpeg";
+import Family from "assets/images/family.jpeg";
 
 const UserData = () => {
   const {
@@ -38,11 +40,15 @@ const UserData = () => {
     );
   };
 
-  const Goals = () => {
+  const Category = () => {
     const answers = [
-      { text: "Lose Weight", value: 0 },
-      { text: "Maintain weight", value: 1 },
-      { text: "Gain muscle", value: 2 },
+      { text: "Smartphones", value: 0 },
+      { text: "Laptops", value: 1 },
+      { text: "Fragrances", value: 2 },
+      { text: "Skincare", value: 3 },
+      { text: "Groceries", value: 4 },
+      { text: "Home-decoration", value: 4 },
+
     ];
 
     return (
@@ -117,8 +123,8 @@ const UserData = () => {
 
   const elements = [
     { image: Woman, description: UserName() },
-    { image: FitPeople, description: Goals() },
-    { image: FitPeople, description: PersonalData() },
+    { image: FitPeople, description: Category() },
+    // { image: FitPeople, description: PersonalData() },
   ];
   return (
     <div>
