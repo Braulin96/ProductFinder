@@ -3,13 +3,13 @@ import axios from "axios";
 import useQuestionsData from "components/hooks/useQuestionsData";
 
 const useRevenueData = () => {
-  const { goal } = useQuestionsData(); // Move the hook call inside useRevenueData
-  console.log('name:', goal)
+  const { category } = useQuestionsData(); // Move the hook call inside useRevenueData
+  console.log('name:', category)
 
 
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get(`https://dummyjson.com/products/category/${goal}`);
+      const response = await axios.get(`https://dummyjson.com/products/category/${category}`);
       //const response = await axios.get(`https://dummyjson.com/products`) 
       console.log("Response:", response);
       return response.data.products;

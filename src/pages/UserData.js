@@ -16,7 +16,7 @@ const UserData = () => {
   const {
     name,
     handleNameChange,
-    goal,
+    category,
     handleOptionChange,
     sex,
     handleSexChange,
@@ -47,13 +47,13 @@ const UserData = () => {
       { text: "Fragrances", value: 2 },
       { text: "Skincare", value: 3 },
       { text: "Groceries", value: 4 },
-      { text: "Home-decoration", value: 4 },
+      { text: "Home-decorations", value: 4 },
 
     ];
 
     return (
       <div className="flex flex-col">
-        <label className="text-xl"> Thanks {name}! Now your goals.</label>
+        <label className="text-xl"> Thanks {name}! Now your categorys.</label>
         <p className="text-sm mt-2">
           Select one option that is better in your case.
         </p>
@@ -64,9 +64,9 @@ const UserData = () => {
           >
             <input
               type="radio"
-              name="goal"
+              name="category"
               value={answer.text}
-              checked={goal === answer.text}
+              checked={category === answer.text}
               onChange={() => handleOptionChange(answer.text)}
             />
             {answer.text}
@@ -115,7 +115,7 @@ const UserData = () => {
           </LocalizationProvider>
         </div>
         <p>
-          my name is {name} I want {goal} I am a {sex} and I am {age} years
+          my name is {name} I want {category} I am a {sex} and I am {age} years
         </p>
       </div>
     );

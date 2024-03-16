@@ -3,13 +3,13 @@ import { useState, useEffect } from "react";
 const useQuestionsData = () => {
   // Retrieve data from local storage on initial load
   const initialName = localStorage.getItem("name") || "";
-  const initialGoal = localStorage.getItem("goal") || null;
+  const initialCategory = localStorage.getItem("category") || null;
   const initialSex = localStorage.getItem("sex") || "";
   const initialAge = localStorage.getItem("age") || null;
 
   // State variables
   const [name, setName] = useState(initialName);
-  const [goal, setGoal] = useState(initialGoal);
+  const [category, setCategory] = useState(initialCategory);
   const [sex, setSex] = useState(initialSex);
   const [selectedDate, setSelectedDate] = useState(null);
 
@@ -21,8 +21,8 @@ const useQuestionsData = () => {
   };
 
   const handleOptionChange = (value) => {
-    setGoal(value);
-    localStorage.setItem("goal", value);
+    setCategory(value);
+    localStorage.setItem("category", value);
   };
 
   const handleSexChange = (e) => {
@@ -48,12 +48,12 @@ const useQuestionsData = () => {
 
   return {
     name,
-    goal,
+    category,
     sex,
     age: initialAge,
     selectedDate,
     setName,
-    setGoal,
+    setCategory,
     setSex,
     setSelectedDate,
     handleNameChange,
