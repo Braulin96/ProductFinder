@@ -48,7 +48,6 @@ const UserData = () => {
       { text: "Skincare", value: 3 },
       { text: "Groceries", value: 4 },
       { text: "Home-decorations", value: 4 },
-
     ];
 
     return (
@@ -59,7 +58,7 @@ const UserData = () => {
         </p>
         {answers.map((answer) => (
           <label
-            className="mt-4 border border-black p-4 w-full"
+            className="mt-4 border border-gray-400 p-4 w-full"
             key={answer.value}
           >
             <input
@@ -68,7 +67,9 @@ const UserData = () => {
               value={answer.text}
               checked={category === answer.text}
               onChange={() => handleOptionChange(answer.text)}
+              style={{ marginRight: "5px", color: "red" }} // Adding space between circle and text
             />
+
             {answer.text}
           </label>
         ))}
