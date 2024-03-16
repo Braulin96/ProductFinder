@@ -8,6 +8,7 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import FitPeople from "assets/images/fitPeople.jpeg";
 import Dashboard from "./DataConfirm";
 import { useData } from "components/hooks/DataContext";
+import Woman from "assets/images/secondWomen.jpeg";
 
 const UserData = () => {
   const {
@@ -31,7 +32,7 @@ const UserData = () => {
           type="text"
           value={name}
           onChange={handleNameChange}
-          className="mt-6 w-full rounded-lg border border-gray-400 px-4 py-2"
+          className="mt-6 w-full rounded-lg border-2 border-gray-200 px-4 py-2 focus:ring-0 focus:outline-none focus:border-secondary-sage"
         />
       </div>
     );
@@ -115,7 +116,7 @@ const UserData = () => {
   };
 
   const elements = [
-    { image: FitPeople, description: UserName() },
+    { image: Woman, description: UserName() },
     { image: FitPeople, description: Goals() },
     { image: FitPeople, description: PersonalData() },
   ];

@@ -21,7 +21,7 @@ const styles = {
     maxWidth: 600,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundColor: "black",
+    backgroundColor: "white",
     position: "relative",
   },
   container: {
@@ -29,7 +29,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     background: "#00000020",
-    background: "gray",
+    background: "#f3f4f6",
   },
 };
 
@@ -66,7 +66,7 @@ const Slide = ({ img, children }) => {
             ) : (
               <a
                 onClick={() => swiper.slideNext()}
-                className="rounded-full font-semibold flex bg-white py-1.5 justify-center text-[#334251] hover:text-[#334251] w-full"
+                className="rounded-full font-semibold flex bg-primary-sage bg-opacity-80 py-1.5 justify-center hover:text-[#334251] w-full text-white"
               >
                 Next
               </a>
@@ -84,7 +84,7 @@ const Slide = ({ img, children }) => {
           left: 0,
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
-          backgroundPosition: "cener",
+          backgroundPosition: "center",
           opacity: 0.4,
         }}
       />
