@@ -47,31 +47,27 @@ const UserData = () => {
       { text: "Fragrances", value: 2 },
       { text: "Skincare", value: 3 },
       { text: "Groceries", value: 4 },
-      { text: "Home-decorations", value: 4 },
+      { text: "Home-decorations", value: 5 },
     ];
-
+  
     return (
       <div className="flex flex-col">
-        <label className="text-xl"> Thanks {name}! Now your categorys.</label>
+        <label className="text-xl"> Thanks {name}! Now your categories.</label>
         <p className="text-sm mt-2">
           Select one option that is better in your case.
         </p>
         {answers.map((answer) => (
-          <label
-            className="mt-4 border border-gray-400 p-4 w-full"
+          <button
+            className={`mt-4 p-4 w-full ${
+              category === answer.text
+                ? "bg-blue-500 text-white" // Applied background blue when selected
+                : "bg-white text-black"
+            }`}
             key={answer.value}
+            onClick={() => handleOptionChange(answer.text)}
           >
-            <input
-              type="radio"
-              name="category"
-              value={answer.text}
-              checked={category === answer.text}
-              onChange={() => handleOptionChange(answer.text)}
-              style={{ marginRight: "5px", color: "red" }} // Adding space between circle and text
-            />
-
             {answer.text}
-          </label>
+          </button>
         ))}
       </div>
     );
