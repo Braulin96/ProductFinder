@@ -11,6 +11,7 @@ import Dashboard from "pages/Dashboard";
 import ApisTest from "./components/shared/ApisTest.js";
 import ApiReact from "components/shared/ApiReact";
 import ApiChat from "components/shared/ApiChat";
+import RevenueAPI from "components/shared/RevenueAPI";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/api",
         element: <ApiChat />,
+      },
+      {
+        path: "/revenue",
+        element: <RevenueAPI />,
       },
     ],
   },
