@@ -6,12 +6,7 @@ import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/secondWomen.jpeg";
 
 const UserData = () => {
-  const {
-    name,
-    handleNameChange,
-    category,
-    handleOptionChange,
-  } = useData();
+  const { name, handleNameChange, category, handleOptionChange } = useData();
 
   const UserName = () => {
     return (
@@ -37,7 +32,7 @@ const UserData = () => {
       { text: "Groceries", value: 4 },
       { text: "Home-decoration", value: 5 },
     ];
-  
+
     return (
       <div className="flex flex-col">
         <label className="text-xl"> Thanks {name}! Now your categories.</label>
@@ -60,8 +55,6 @@ const UserData = () => {
       </div>
     );
   };
-
-
 
   const elements = [
     { image: Woman, description: UserName() },
