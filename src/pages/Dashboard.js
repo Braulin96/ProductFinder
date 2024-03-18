@@ -1,6 +1,6 @@
 //components:
 import { useData } from "components/hooks/DataContext";
-import useRevenueData from "../components/shared/useRevenueData";
+import useRevenueData from "../components/hooks/useRevenueData";
 import OpenModal from "components/shared/OpenModal";
 import Carousel from "components/shared/Carousel";
 
