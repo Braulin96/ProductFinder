@@ -6,7 +6,8 @@ import "swiper/css";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
 import FitWoman from "assets/images/fitWoman.webp";
-import Woman from "assets/images/secondWomen.jpeg";
+import Woman from "assets/images/thirdLady.jpeg";
+//lay and secondLady, thirdlady
 
 const elements = [
   {
@@ -30,14 +31,14 @@ const elements = [
 const Home = () => {
   return (
     <div
-      className="flex flex-col items-center bg-gray-100 relative sm:px-4"
+      className="flex flex-col items-center relative sm:px-4 bg-[#D9D9D9]"
       style={{ height: "100vh" }}
     >
       <div className="my-auto md:px-12 py-12 rounded-3xl w-full max-w-7xl mx-auto flex md:flex-row flex-col gap-y-8 z-20 bg-gray-50 bg-opacity-60 shadow-xl gap-x-4">
-        <div className="md:w-1/2 w-full h-full text-center flex flex-col sm:gap-y-8 gap-y-4 text-gray-800 my-auto justify-center">
+        <div className="md:w-1/2 w-full h-full text-center flex flex-col sm:gap-y-8 gap-y-4 text-secondary-gray my-auto justify-center">
           <h1 className="sm:text-4xl text-3xl">
             Welcome to
-            <span className="text-primary-sage font-bold ml-2">
+            <span className="text-primary-blue font-bold ml-2">
               Product Finder
             </span>
           </h1>
@@ -47,7 +48,10 @@ const Home = () => {
             smartwatches. Explore our collection and find the perfect product to
             suit your needs.
           </p>
-          <Link to ='questions' className="hidden md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-lg bg-primary-sage text-white font-bold mt-4">
+          <Link
+            to="questions"
+            className="hidden md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-lg bg-primary-blue text-white font-bold mt-4"
+          >
             Let's Start
           </Link>
         </div>
@@ -57,11 +61,8 @@ const Home = () => {
             modules={[Autoplay]}
             spaceBetween={50}
             navigation
-            autoplay={{ delay: 2000, disableOnInteraction: false }} // Setting autoplay to true with a delay of 5000ms (5 seconds)
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            // effect={'cube'}
           >
             {elements.map((images) => (
               <SwiperSlide key={images.name}>
@@ -78,14 +79,14 @@ const Home = () => {
           </Swiper>
         </div>
         <Link
-           to ='questions'
-          className="md:hidden flex px-24 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-sage text-white font-bold "
+          to="questions"
+          className="md:hidden flex px-24 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-blue text-white font-bold "
         >
           <p className="mx-auto"> Let's Start</p>
         </Link>
       </div>
       <div className="absolute z-10 h-full md:flex hidden">
-        <img style={{ height: "100vh", opacity: "0.6" }} src={Woman} />
+        <img style={{ height: "100vh", opacity: "0.7" }} src={Woman} />
       </div>
     </div>
   );
