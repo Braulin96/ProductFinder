@@ -13,24 +13,27 @@ const ProductsByCategory = () => {
     return <div>Error fetching data</div>;
   }
   return (
-    <div className="flex gap-x-8 h-[400px]">
+    <div className="flex gap-x-8 h-[200px]">
       {data.map((recipe) => (
         <div
-          className="mt-8 w-fit rounded-lg overflow-hidden shadow-2xl h-full"
+          className="mt-8 w-fit rounded-lg overflow-hidden shadow-xl h-full flex py-4"
           key={recipe.title}
         >
-          <div className="h-1/2 overflow-hidden">
+          <div className="overflow-hidden w-1/2 my-auto px-2 relative">
             {recipe.images.length > 0 && ( // Check if images array is not empty
-              <img src={recipe.images[0]} alt={`Image`} /> // Render only the first image
-            )}
+              <img className="" src={recipe.images[0]} alt={`Image`} /> // Render only the first image
+            )}  
           </div>
-          <div className="px-6 py-3 h-1/2 flex flex-col">
-            {/* <p>Id:{recipe.id}</p> */}
-            <p>Brand:{recipe.brand}</p>
-            <p>Nome: {recipe.title}</p>
-            <p>Price: {recipe.price} £</p>
-            <p>Category: {recipe.category}</p>
-            <p className="text-[#39402d] mt-auto ml-auto font-semibold"> Know More</p>
+         
+          <div className="px-6 py-3 flex flex-col w-1/2 my-auto h-full">
+            <div className="my-auto">
+              {/* <p>Id:{recipe.id}</p> */}
+              {/* <p>Brand:{recipe.brand}</p> */}
+              <p> {recipe.title}</p>
+              <p>Price: {recipe.price} £</p>
+              {/* <p>Category: {recipe.category}</p> */}
+            </div>
+            <p className="text-[#39402d] justify-self-ends ml-auto font-semibold"> Know More</p>
           </div>
           
           {/* <div>
