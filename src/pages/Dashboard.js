@@ -29,7 +29,7 @@ const ProductsByCategory = () => {
             <div className="my-auto">
               {/* <p>Id:{recipe.id}</p> */}
               {/* <p>Brand:{recipe.brand}</p> */}
-              <p> {recipe.title}</p>
+              <p className="mt-0 capitalize"> {recipe.title}</p>
               <p>Price: {recipe.price} £</p>
               {/* <p>Category: {recipe.category}</p> */}
             </div>
