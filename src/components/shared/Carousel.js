@@ -22,7 +22,7 @@ const Carousel = ({ slides }) => {
     >
       {slides.map((elements, index) => (
         <SwiperSlide className="m-auto" key={index}>
-          <img className="mx-auto" src={elements} alt={elements} />
+          <img className="mx-auto max-w-[300px]" src={elements} alt={elements} />
         </SwiperSlide>
       ))}
       {/* <SwiperSlide>1</SwiperSlide>
