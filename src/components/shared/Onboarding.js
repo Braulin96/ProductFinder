@@ -57,7 +57,7 @@ const Slide = ({ img, children }) => {
           <div className="mt-auto">
             {swiper.isEnd ? (
               <Link 
-              to ={'dashboard'}
+              to ='/dashboard'
                 className="rounded-full font-semibold flex bg-primary-sage py-1.5 justify-center text-white hover:text-[#334251] w-full"
                 //to={start}
               >
