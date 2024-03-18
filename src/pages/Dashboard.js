@@ -16,7 +16,7 @@ const ProductsByCategory = () => {
     <div className="flex gap-x-8 h-[200px]">
       {data.map((recipe) => (
         <div
-          className="mt-8 w-fit rounded-lg overflow-hidden shadow-xl h-full flex py-4"
+          className="mt-8 w-fit rounded-lg overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl h-full flex py-4 transition-all duration-500"
           key={recipe.title}
         >
           <div className="overflow-hidden w-1/2 my-auto px-2 relative">
