@@ -86,7 +86,10 @@ const Home = () => {
         </Link>
       </div>
       <div className="absolute z-10 h-full md:flex hidden">
-        <img style={{ height: "100vh", opacity: "0.7" }} src={Woman} />
+        <div className="relative">
+          <img style={{ height: "100vh", opacity: "0.7" }} src={Woman} />
+          <div className="absolute w-12 aspect-square bg-primary-blue rounded-full z-40 top-20 right-8"></div>
+        </div>
       </div>
     </div>
   );
