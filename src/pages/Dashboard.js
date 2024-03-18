@@ -3,10 +3,11 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import useRevenueData from "../components/shared/useRevenueData";
 import OpenModal from "components/shared/OpenModal";
+import Carousel from "components/shared/Carousel";
 
 const ProductsByCategory = () => {
   const { data, isLoading, isError } = useRevenueData();
-  console.log('data:', data)
+  console.log("data:", data);
   // isLoading and isError you do not need to declare, automatically from react-query
   if (isLoading) {
     return <div>Loading...</div>;
@@ -25,9 +26,9 @@ const ProductsByCategory = () => {
             {/* {recipe.images.length > 0 && ( // Check if images array is not empty
               <img className="" src={recipe.images[0]} alt={`Image`} /> // Render only the first image
             )}   */}
-             <img className="" src={recipe.thumbnail} alt={`Image`} /> 
+            <img className="" src={recipe.thumbnail} alt={`Image`} />
           </div>
-         
+
           <div className="px-6 flex flex-col w-1/2 my-auto h-full">
             <div className="my-auto">
               {/* <p>Id:{recipe.id}</p> */}
@@ -36,12 +37,26 @@ const ProductsByCategory = () => {
               <p>Price: {recipe.price} £</p>
               {/* <p>Category: {recipe.category}</p> */}
             </div>
-            <OpenModal openModalButton="Know More">
-            <p className="mt-0 capitalize"> {recipe.title}</p>
-              <p>Price: {recipe.price} £</p>
+            <OpenModal openModalButton="Know More" title={recipe.title}>
+              <div>
+                <p className="mt-0 capitalize">
+                  Description: {recipe.description}
+                </p>
+                <p className="mt-0 capitalize">Category: {recipe.category}</p>
+                <p className="mt-0 capitalize">Price: {recipe.price}£</p>
+                <p className="mt-0 capitalize">
+                  Discount percentage: {recipe.discountPercentage}%
+                </p>
+                <p className="mt-0 capitalize">Stock: {recipe.stock}</p>
+              </div>
+              <div className="py-4">
+              <Carousel slides={recipe.images}/>
+
+              </div>
+           
             </OpenModal>
           </div>
-          
+
           {/* <div>
             {recipe.images.map((image, index) => (
               <img key={index} src={image} alt={`Image ${index}`} />

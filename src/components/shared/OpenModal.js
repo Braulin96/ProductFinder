@@ -13,7 +13,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
-const OpenModal = ({ openModalButton, children }) => {
+const OpenModal = ({ title, openModalButton, children }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -34,7 +34,7 @@ const OpenModal = ({ openModalButton, children }) => {
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
       >
-        <DialogTitle>{"Current Status"}</DialogTitle>
+        <DialogTitle>{title}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-slide-description">
             {children}
