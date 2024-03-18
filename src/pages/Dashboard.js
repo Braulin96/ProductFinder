@@ -13,25 +13,31 @@ const ProductsByCategory = () => {
     return <div>Error fetching data</div>;
   }
   return (
-    <div>
-      <h2>API React</h2>
+    <div className="flex gap-x-8 h-[400px]">
       {data.map((recipe) => (
-        <div className="mt-8" key={recipe.title}>
-          <p>Id:{recipe.id}</p>
-          <p>Brand:{recipe.brand}</p>
-          <p>Nome: {recipe.title}</p>
-          <p>Price: {recipe.price}</p>
-          <p>Category: {recipe.category}</p>
+        <div
+          className="mt-8 w-fit rounded-lg overflow-hidden shadow-2xl h-full"
+          key={recipe.title}
+        >
+          <div className="h-1/2 overflow-hidden">
+            {recipe.images.length > 0 && ( // Check if images array is not empty
+              <img src={recipe.images[0]} alt={`Image`} /> // Render only the first image
+            )}
+          </div>
+          <div className="px-6 p-4 h-1/2 flex flex-col">
+            <p>Id:{recipe.id}</p>
+            <p>Brand:{recipe.brand}</p>
+            <p>Nome: {recipe.title}</p>
+            <p>Price: {recipe.price} £</p>
+            <p>Category: {recipe.category}</p>
+            <p className="text-[#39402d] mt-auto ml-auto font-semibold"> Know More</p>
+          </div>
+          
           {/* <div>
             {recipe.images.map((image, index) => (
               <img key={index} src={image} alt={`Image ${index}`} />
             ))}
           </div> */}
-          <div>
-            {recipe.images.length > 0 && ( // Check if images array is not empty
-              <img src={recipe.images[0]} alt={`Image`} /> // Render only the first image
-            )}
-          </div>
         </div>
       ))}
     </div>
