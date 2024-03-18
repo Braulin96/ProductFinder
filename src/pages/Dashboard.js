@@ -25,7 +25,7 @@ const ProductsByCategory = () => {
             )}  
           </div>
          
-          <div className="px-6 py-3 flex flex-col w-1/2 my-auto h-full">
+          <div className="px-6 flex flex-col w-1/2 my-auto h-full">
             <div className="my-auto">
               {/* <p>Id:{recipe.id}</p> */}
               {/* <p>Brand:{recipe.brand}</p> */}
@@ -33,7 +33,7 @@ const ProductsByCategory = () => {
               <p>Price: {recipe.price} £</p>
               {/* <p>Category: {recipe.category}</p> */}
             </div>
-            <p className="text-[#39402d] justify-self-ends ml-auto font-semibold"> Know More</p>
+            <p className="text-[#39402d] ml-auto font-semibold">Know More</p>
           </div>
           
           {/* <div>
