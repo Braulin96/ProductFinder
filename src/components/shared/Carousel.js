@@ -22,9 +22,6 @@ const Carousel = ({ slides }) => {
           <img className="mx-auto max-w-[300px] max-h-[300px]" src={elements} alt={elements} />
         </SwiperSlide>
       ))}
-      {/* <SwiperSlide>1</SwiperSlide>
-      <SwiperSlide>2</SwiperSlide>
-      <SwiperSlide>3</SwiperSlide> */}
     </Swiper>
   );
 };

@@ -31,7 +31,7 @@ const ProductsByCategory = () => {
                 <p className="mt-0 capitalize"> {recipe.title}</p>
                 <p>Price: {recipe.price} £</p>
               </div>
-              <div className="">
+              <div>
                 <OpenModal
                   className="ml-auto"
                   openModalButton="Know More"
@@ -59,12 +59,24 @@ const ProductsByCategory = () => {
           </div>
         ))}
       </div>
+      {/* <div className="flex">
+        {data.map((recipe) =>
+          recipe.images.map((image, index) => (
+            <img
+            width={150}
+              key={`${recipe.id}-${index}`}
+              src={image}
+              alt={`recipe-${index}`}
+            />
+          ))
+        )}
+      </div> */}
     </div>
   );
 };
 
 const Dashboard = () => {
-  const { name } = useData();
+  const { name, category } = useData();
 
   return (
     <div
@@ -72,7 +84,7 @@ const Dashboard = () => {
       style={{ height: "100vh" }}
     >
       <div className=" w-full max-w-7xl mx-auto sm:px-2 px-4">
-        Hello {name}
+        Hello {name}, we have selected the best options in the market for you based on the category chose - {category}
         <ProductsByCategory />
       </div>
     </div>
