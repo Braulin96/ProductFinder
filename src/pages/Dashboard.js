@@ -24,8 +24,8 @@ const ProductsByCategory = () => {
               <img src={recipe.images[0]} alt={`Image`} /> // Render only the first image
             )}
           </div>
-          <div className="px-6 p-4 h-1/2 flex flex-col">
-            <p>Id:{recipe.id}</p>
+          <div className="px-6 py-3 h-1/2 flex flex-col">
+            {/* <p>Id:{recipe.id}</p> */}
             <p>Brand:{recipe.brand}</p>
             <p>Nome: {recipe.title}</p>
             <p>Price: {recipe.price} £</p>
