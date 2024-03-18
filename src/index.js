@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import Landing from "pages/Landing";
+import Home from "pages/Home";
 import UserData from "pages/UserData";
 import ErrorPage from "pages/ErrorPage";
 import Dashboard from "pages/Dashboard";
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Landing />,
+        element: <Home />,
       },
       {
         path: "/questions",
@@ -33,7 +33,6 @@ const router = createBrowserRouter([
 ]);
 
 const client = new QueryClient();
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

@@ -27,7 +27,7 @@ const elements = [
   },
 ];
 
-const Landing = () => {
+const Home = () => {
   return (
     <div
       className="flex flex-col items-center bg-gray-100 relative sm:px-4"
@@ -90,4 +90,4 @@ const Landing = () => {
     </div>
   );
 };
-export default Landing;
+export default Home;
