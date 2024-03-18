@@ -1,10 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore from "swiper";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import { useSwiper } from "swiper/react";
-import { useSwiperSlide } from "swiper/react";
 
 const Carousel = ({ slides }) => {
   return (
