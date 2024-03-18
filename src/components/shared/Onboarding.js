@@ -50,15 +50,15 @@ const Slide = ({ img, children }) => {
         )}
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
           <div className="font-medium h-full flex">
-            <div className="bg-white bg-opacity-80 m-auto w-full aspect-square rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray">
+            <div className="bg-white bg-opacity-80 m-auto w-full py-14 rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray">
               {children}
             </div>
           </div>
           <div className="mt-auto">
             {swiper.isEnd ? (
               <Link 
-              to ='dashboard'
-                className="rounded-full font-semibold flex bg-white py-1.5 justify-center text-[#334251] hover:text-[#334251] w-full"
+              to ={'dashboard'}
+                className="rounded-full font-semibold flex bg-primary-sage py-1.5 justify-center text-white hover:text-[#334251] w-full"
                 //to={start}
               >
                 Start
