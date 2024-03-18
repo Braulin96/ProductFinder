@@ -81,7 +81,7 @@ const Home = () => {
                 <div className="w-auto sm:max-h-96 max-h-72 aspect-square mx-auto rounded-full flex justify-center">
                   <img
                     style={{ opacity: "0.8" }}
-                    className="rounded-full mx-auto shrink h-full"
+                    className="rounded-full mx-auto shrink h-full border-2 border-primary-blue"
                     src={images.image}
                     alt="FitPeople"
                   />
