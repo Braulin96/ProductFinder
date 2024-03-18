@@ -1,11 +1,9 @@
 import React from "react";
 import useRevenueData from "./useRevenueData";
-import useQuestionsData from "components/hooks/useQuestionsData";
+
 
 function ApiReact() {
   const { data, isLoading, isError } = useRevenueData();
-  const { name } = useQuestionsData();
-  //console.log("data:", data);
   // isLoading and isError you do not need to declare, automatically from react-query
 
   if (isLoading) {
