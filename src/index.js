@@ -6,7 +6,7 @@ import Landing from "pages/Landing";
 import Contact from "components/Contact";
 import UserData from "pages/UserData";
 import ErrorPage from "pages/ErrorPage";
-import DataConfirm from "pages/DataConfirm";
+
 import Dashboard from "pages/Dashboard";
 import ApisTest from "./components/shared/ApisTest.js";
 import ApiReact from "components/shared/ApiReact";
@@ -30,10 +30,7 @@ const router = createBrowserRouter([
         path: "/questions",
         element: <UserData />,
       },
-      {
-        path: "/confirm",
-        element: <DataConfirm />,
-      },
+    
       {
         path: "/dashboard",
         element: <Dashboard />,

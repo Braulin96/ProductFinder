@@ -6,7 +6,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
-import Dashboard from "./DataConfirm";
 import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/secondWomen.jpeg";
 import Fragrances from "assets/images/fragrances.jpeg";

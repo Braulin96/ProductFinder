@@ -47,7 +47,7 @@ const Landing = () => {
             smartwatches. Explore our collection and find the perfect product to
             suit your needs.
           </p>
-          <Link to ='questions' className="hidden md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-sage text-white font-bold mt-4">
+          <Link to ='questions' className="hidden md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-lg bg-primary-sage text-white font-bold mt-4">
             Let's Start
           </Link>
         </div>
