@@ -4,9 +4,6 @@ import useQuestionsData from "components/hooks/useQuestionsData";
 
 const useRevenueData = () => {
   const { category } = useQuestionsData(); // Move the hook call inside useRevenueData
-  console.log('name:', category)
-
-
   const fetchRecipes = async () => {
     try {
       const response = await axios.get(`https://dummyjson.com/products/category/${category}`);
