@@ -25,8 +25,14 @@ const OpenModal = ({ title, openModalButton, children }) => {
   };
 
   return (
-    <React.Fragment>
-      <Button onClick={handleClickOpen}>{openModalButton}</Button>
+    <React.Fragment className="">
+      <Button
+        className="w-full"
+        style={{ justifyContent: "end" }}
+        onClick={handleClickOpen}
+      >
+        {openModalButton}
+      </Button>
       <Dialog
         open={open}
         TransitionComponent={Transition}

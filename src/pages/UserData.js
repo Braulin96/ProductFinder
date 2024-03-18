@@ -47,7 +47,7 @@ const UserData = () => {
       { text: "Fragrances", value: 2 },
       { text: "Skincare", value: 3 },
       { text: "Groceries", value: 4 },
-      { text: "Home-decorations", value: 5 },
+      { text: "Home-decoration", value: 5 },
     ];
   
     return (
