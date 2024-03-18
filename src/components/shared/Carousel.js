@@ -1,4 +1,4 @@
-import React from "react";
+//components:
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -9,10 +9,8 @@ const Carousel = ({ slides }) => {
       className="flex w-full"
       modules={[Autoplay]}
       spaceBetween={50}
-      //disableOnInteraction={true}
       navigation
-      autoplay={{ delay: 3000, disableOnInteraction: false }} // Setting autoplay to true with a delay of 5000ms (5 seconds)
-      //Autoplay={false}
+      autoplay={{ delay: 3000, disableOnInteraction: false }}
       slidesPerView={1}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
