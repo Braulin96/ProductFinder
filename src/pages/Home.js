@@ -4,27 +4,39 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 //images:
-import FitPeople from "assets/images/fitPeople.jpeg";
-import FitWoman from "assets/images/fitWoman.webp";
 import Woman from "assets/images/thirdLady.jpeg";
+import Fragrance from "assets/images/category/fragrances.jpeg"
+import Groceries from "assets/images/category/groceries.jpeg"
+import HomeDecoration from "assets/images/category/home.jpeg"
+import Mobile from "assets/images/category/mobile.jpeg"
+import Skincare from "assets/images/category/skincare.jpeg"
+import Laptop from "assets/images/category/laptop.jpeg"
 //lay and secondLady, thirdlady
 
 const elements = [
   {
     name: "smartphone",
-    image: FitPeople,
+    image: Mobile,
   },
   {
     name: "laptop",
-    image: FitWoman,
+    image: Laptop,
+  },
+  {
+    name: "fragrance",
+    image: Fragrance,
   },
   {
     name: "skincare",
-    image: FitPeople,
+    image: Skincare,
   },
   {
     name: "groceries",
-    image: FitWoman,
+    image: Groceries,
+  },
+  {
+    name: "home",
+    image: HomeDecoration,
   },
 ];
 
@@ -88,7 +100,7 @@ const Home = () => {
       <div className="absolute z-10 h-full md:flex hidden">
         <div className="relative">
           <img style={{ height: "100vh", opacity: "0.7" }} src={Woman} />
-          <div className="absolute w-12 aspect-square bg-primary-blue rounded-full z-40 top-20 right-8"></div>
+          <div className="absolute w-12 aspect-square bg-primary-blue rounded-full z-40 top-20 right-8 bg-opacity-20"></div>
         </div>
       </div>
     </div>
