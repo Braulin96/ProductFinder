@@ -1,15 +1,9 @@
 //components:
 import Onboarding from "../components/shared/Onboarding";
-import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 //images:
 import FitPeople from "assets/images/fitPeople.jpeg";
 import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/secondWomen.jpeg";
-import Fragrances from "assets/images/fragrances.jpeg";
-import Family from "assets/images/family.jpeg";
 
 const UserData = () => {
   const {
@@ -17,11 +11,6 @@ const UserData = () => {
     handleNameChange,
     category,
     handleOptionChange,
-    sex,
-    handleSexChange,
-    selectedDate,
-    handleDateChange,
-    age,
   } = useData();
 
   const UserName = () => {
@@ -72,60 +61,15 @@ const UserData = () => {
     );
   };
 
-  const PersonalData = () => {
-    return (
-      <div className="flex flex-col">
-        <label className="text-xl">Select sex:</label>
-        <div className="flex gap-x-8">
-          <label className="inline-flex items-center mt-2">
-            <input
-              type="radio"
-              value="male"
-              checked={sex === "male"}
-              onChange={handleSexChange}
-              className="form-radio h-5 w-5 text-blue-600"
-            />
-            <span className="ml-2">Male</span>
-          </label>
-          <label className="inline-flex items-center mt-2">
-            <input
-              type="radio"
-              value="female"
-              checked={sex === "female"}
-              onChange={handleSexChange}
-              className="form-radio h-5 w-5 text-pink-600"
-            />
-            <span className="ml-2">Female</span>
-          </label>
 
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DemoContainer components={["DatePicker"]}>
-              <DemoItem label="Insert Your Birthday">
-                <DatePicker
-                  label="Insert Your Birthday"
-                  value={selectedDate}
-                  onChange={handleDateChange}
-                />
-              </DemoItem>
-            </DemoContainer>
-          </LocalizationProvider>
-        </div>
-        <p>
-          my name is {name} I want {category} I am a {sex} and I am {age} years
-        </p>
-      </div>
-    );
-  };
 
   const elements = [
     { image: Woman, description: UserName() },
     { image: FitPeople, description: Category() },
-    // { image: FitPeople, description: PersonalData() },
   ];
   return (
     <div>
       <Onboarding elements={elements} />
-      {/* <Dashboard/> */}
     </div>
   );
 };
