@@ -44,7 +44,7 @@ const UserData = () => {
           <button
             className={`mt-4 p-3 w-full rounded-lg ${
               category === answer.text
-                ? "bg-primary-sage text-white" // Applied background blue when selected
+                ? "bg-primary-blue text-white" // Applied background blue when selected
                 : "bg-white text-black"
             }`}
             key={answer.value}
