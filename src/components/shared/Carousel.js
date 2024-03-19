@@ -12,8 +12,6 @@ const Carousel = ({ slides }) => {
       navigation
       autoplay={{ delay: 3000, disableOnInteraction: false }}
       slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
     >
       {slides.map((elements, index) => (
         <SwiperSlide className="m-auto" key={index}>
