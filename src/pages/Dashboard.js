@@ -62,7 +62,7 @@ const ProductsByCategory = () => {
 
 const Dashboard = () => {
   const { name, category } = useData();
-
+  
   return (
     <div
       className="flex flex-col items-center relative sm:px-4 text-secondary-gray"

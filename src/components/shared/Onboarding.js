@@ -6,6 +6,7 @@ import "swiper/css";
 import { useSwiper } from "swiper/react";
 import { useSwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
+import { useData } from "components/hooks/DataContext";
 //icons:
 import { FiChevronLeft } from "react-icons/fi";
 
@@ -34,6 +35,7 @@ const styles = {
 };
 
 const Slide = ({ img, children }) => {
+  const { name } = useData();
   const swiper = useSwiper();
   const swiperSlide = useSwiperSlide();
   return (
@@ -45,7 +47,11 @@ const Slide = ({ img, children }) => {
             style={{ zIndex: 1 }}
             onClick={() => swiper.slidePrev()}
           >
-            <FiChevronLeft className="m-auto" style={{ color: "#1976d2" }} size={28} />
+            <FiChevronLeft
+              className="m-auto"
+              style={{ color: "#1976d2" }}
+              size={28}
+            />
           </a>
         )}
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
@@ -59,14 +65,19 @@ const Slide = ({ img, children }) => {
               <Link
                 to="/dashboard"
                 className="rounded-lg cursor-pointer font-semibold flex bg-primary-blue py-1.5 justify-center text-white w-full"
-                //to={start}
               >
                 Start
               </Link>
             ) : (
               <a
-                onClick={() => swiper.slideNext()}
-                className="rounded-lg font-semibold cursor-pointer flex bg-primary-blue bg-opacity-80 py-1.5 justify-center w-full text-white"
+                onClick={() => {
+                  if (name.trim()) {
+                    swiper.slideNext();
+                  }
+                }}
+                className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center w-full transition-all duration-700 text-white ${
+                  name.trim() ? "bg-opacity-80 cursor-pointer" : "bg-opacity-30 cursor-none"
+                }`}
               >
                 Next
               </a>
