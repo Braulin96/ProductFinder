@@ -41,11 +41,11 @@ const Slide = ({ img, children }) => {
       <div style={styles.slide} className="flex flex-col">
         {!swiper.isBeginning && (
           <a
-            className="pt-4 px-4"
+            className="mt-4 mx-4 bg-white w-10 aspect-square rounded-full flex shadow-2xl"
             style={{ zIndex: 1 }}
             onClick={() => swiper.slidePrev()}
           >
-            <FiChevronLeft style={{ color: "#1976d2" }} size={28} />
+            <FiChevronLeft className="m-auto" style={{ color: "#1976d2" }} size={28} />
           </a>
         )}
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
