@@ -28,7 +28,7 @@ const OpenModal = ({ title, openModalButton, children }) => {
     <React.Fragment className="">
       <Button
         className="w-full"
-        style={{ justifyContent: "end" }}
+        style={{ justifyContent: "end", fontSize:'12px', width:'fit-content', marginLeft:'auto' }}
         onClick={handleClickOpen}
       >
         {openModalButton}

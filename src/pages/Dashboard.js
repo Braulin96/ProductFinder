@@ -1,6 +1,6 @@
 //components:
 import { useData } from "components/hooks/DataContext";
-import useRevenueData from "../components/hooks/useRevenueData";
+import useRevenueData from "components/hooks/useRevenueData";
 import OpenModal from "components/shared/OpenModal";
 import Carousel from "components/shared/Carousel";
 
@@ -31,7 +31,7 @@ const ProductsByCategory = () => {
                 <p className="mt-0 capitalize"> {recipe.title}</p>
                 <p>Price: {recipe.price} £</p>
               </div>
-              <div>
+              <div className="flex">
                 <OpenModal
                   className="ml-auto"
                   openModalButton="Know More"
@@ -80,11 +80,11 @@ const Dashboard = () => {
 
   return (
     <div
-      className="flex flex-col items-center relative sm:px-4"
+      className="flex flex-col items-center relative sm:px-4 text-secondary-gray"
       style={{ height: "100vh" }}
     >
       <div className=" w-full max-w-7xl mx-auto sm:px-2 px-4">
-        Hello {name}, we have selected the best options in the market for you based on the category chose - {category}
+        <p>Hello {name}, we have selected the best options in the market for you based on the category chose - {category}</p>
         <ProductsByCategory />
       </div>
     </div>
