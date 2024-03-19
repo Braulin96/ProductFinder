@@ -35,7 +35,7 @@ const styles = {
 };
 
 const Slide = ({ img, children }) => {
-  const { name } = useData();
+  const { name, category } = useData();
   const swiper = useSwiper();
   const swiperSlide = useSwiperSlide();
   return (
@@ -63,11 +63,13 @@ const Slide = ({ img, children }) => {
           <div className="mt-auto">
             {swiper.isEnd ? (
               <Link
-                to="/dashboard"
-                className="rounded-lg cursor-pointer font-semibold flex bg-primary-blue py-1.5 justify-center text-white w-full"
-              >
-                Start
-              </Link>
+              to="/dashboard"
+              className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center text-white w-full transition-all duration-700  ${
+                category ? "bg-opacity-80 cursor-pointer" : "bg-opacity-30 cursor-none pointer-events-none"
+              }`}
+            >
+              Start
+            </Link>
             ) : (
               <a
                 onClick={() => {
