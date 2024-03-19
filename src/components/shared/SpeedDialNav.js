@@ -12,13 +12,16 @@ import { MdRestartAlt } from "react-icons/md";
 const actions = [
   { icon: <GoHome color="#1976d2" size={24} />, name: "Home", link: "/" },
   { icon: <GoQuestion color="#1976d2" size={24} />, name: "Edit Answers", link: "/questions" },
-  { icon: <MdRestartAlt color="#1976d2" size={24} />, name: "New Answers", link: "/new-answers" },
+  { icon: <MdRestartAlt color="#1976d2" size={24} />, name: "New Answers", link: "/questions" },
 ];
 
 const SpeedDialNav = () => {
   const navigate = useNavigate();
 
-  const handleActionClick = (link) => {
+  const handleActionClick = (link, name) => {
+    if (name === "New Answers") {
+      localStorage.clear(); // Clear localStorage only for "New Answers"
+    }
     navigate(link);
   };
 
@@ -34,7 +37,7 @@ const SpeedDialNav = () => {
             key={action.name}
             icon={action.icon}
             tooltipTitle={action.name}
-            onClick={() => handleActionClick(action.link)}
+            onClick={() => handleActionClick(action.link, action.name)}
           />
         ))}
       </SpeedDial>
