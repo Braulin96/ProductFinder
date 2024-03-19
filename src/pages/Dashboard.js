@@ -27,7 +27,9 @@ const ProductsByCategory = () => {
           <div className="px-6 flex flex-col w-1/2 my-auto h-full">
             <div className="my-auto">
               <p className="mt-0 capitalize"> {recipe.title}</p>
-              <p>Price:<span className="ml-1 font-normal">{recipe.price} £</span></p>
+              <p>
+                Price:<span className="ml-1 font-normal">{recipe.price} £</span>
+              </p>
             </div>
             <div className="flex">
               <OpenModal
@@ -66,13 +68,15 @@ const Dashboard = () => {
       className="flex flex-col items-center relative sm:px-4 text-secondary-gray"
       style={{ height: "100vh" }}
     >
-      <div className="w-full max-w-7xl mx-auto sm:px-2 px-4 sm:py-20 py-10">
+      <div className="w-full max-w-7xl mx-auto sm:px-2 px-4 sm:py-20 py-10 flex flex-col relative">
         <h1 className="sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8">
-          Hello <span className="font-light">{name}</span>, we have selected the best options in the market for you
-          based on the category chose - <span className="text-primary-blue">{category}.</span>
+          Hello <span className="font-light">{name}</span>, we have selected the
+          best options in the market for you based on the category chose - <span className="text-primary-blue">{category}.</span>
         </h1>
         <ProductsByCategory />
-        <SpeedDialNav/>
+        <div className="mt-auto absolute -bottom-10 sm:-bottom-5 right-0">
+          <SpeedDialNav />
+        </div>
       </div>
     </div>
   );

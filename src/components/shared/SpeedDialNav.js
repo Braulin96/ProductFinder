@@ -35,7 +35,7 @@ const SpeedDialNav = () => {
   };
 
   return (
-    <Box sx={{ height: 200, transform: "translateZ(0px)", flexGrow: 1 }}>
+    <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
       <SpeedDial
         ariaLabel="SpeedDial basic example"
         sx={{ position: "absolute", bottom: 16, right: 16 }}
