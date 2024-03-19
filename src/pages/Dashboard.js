@@ -8,8 +8,6 @@ import SpeedDialNav from "components/shared/SpeedDialNav";
 const ProductsByCategory = () => {
   const { data, isLoading, isError } = useRevenueData();
   // isLoading and isError you do not need to declare, automatically from react-query
-  console.log("dataCategory:", data);
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
