@@ -1,9 +1,10 @@
 //components:
 import Onboarding from "../components/shared/Onboarding";
 //images:
-import FitPeople from "assets/images/fitPeople.jpeg";
 import { useData } from "components/hooks/DataContext";
-import Woman from "assets/images/secondWomen.jpeg";
+import Woman from "assets/images/secondWoman.jpeg";
+import Lady from "assets/images/thirdLady.jpeg"
+
 
 const UserData = () => {
   const { name, handleNameChange, category, handleOptionChange } = useData();
@@ -57,8 +58,8 @@ const UserData = () => {
   };
 
   const elements = [
-    { image: Woman, description: UserName() },
-    { image: FitPeople, description: Category() },
+    { image: Lady, description: UserName() },
+    { image: Woman, description: Category() },
   ];
   return (
     <div>
