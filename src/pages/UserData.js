@@ -41,9 +41,9 @@ const UserData = () => {
         </p>
         {answers.map((answer) => (
           <button
-            className={`mt-4 px-3 py-1.5 w-full rounded-lg border-2 border-tertiary-gray transition-all duration-700 ${
+            className={`mt-4 px-3 py-1.5 w-full rounded-lg border-2 border-tertiary-gray ${
               category === answer.text
-                ? "bg-primary-blue text-white" // Applied background blue when selected
+                ? "bg-primary-blue text-white"
                 : "bg-white text-secondary-gray"
             }`}
             key={answer.value}
