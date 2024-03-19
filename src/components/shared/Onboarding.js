@@ -58,7 +58,7 @@ const Slide = ({ img, children }) => {
             {swiper.isEnd ? (
               <Link 
               to ='/dashboard'
-                className="rounded-full font-semibold flex bg-primary-blue py-1.5 justify-center text-white hover:text-[#334251] w-full"
+                className="rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center text-white hover:text-[#334251] w-full"
                 //to={start}
               >
                 Start
@@ -66,7 +66,7 @@ const Slide = ({ img, children }) => {
             ) : (
               <a
                 onClick={() => swiper.slideNext()}
-                className="rounded-full font-semibold flex bg-primary-blue bg-opacity-80 py-1.5 justify-center hover:text-[#334251] w-full text-white"
+                className="rounded-lg font-semibold flex bg-primary-blue bg-opacity-80 py-1.5 justify-center hover:text-[#334251] w-full text-white"
               >
                 Next
               </a>
