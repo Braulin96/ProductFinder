@@ -3,14 +3,14 @@ import Onboarding from "../components/shared/Onboarding";
 //images:
 import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/secondWoman.jpeg";
-import Lady from "assets/images/thirdLady.jpeg"
+import Lady from "assets/images/thirdLady.jpeg";
 
 const UserData = () => {
   const { name, handleNameChange, category, handleOptionChange } = useData();
 
   const UserName = () => {
     return (
-      <div className="">
+      <div className="text-secondary-gray">
         <label className="text-xl"> What is you first name</label>
         <input
           placeholder="type your name..."
@@ -34,17 +34,17 @@ const UserData = () => {
     ];
 
     return (
-      <div className="flex flex-col">
+      <div className="flex flex-col text-secondary-gray">
         <label className="text-xl"> Thanks {name}! Now your categories.</label>
         <p className="text-sm mt-2">
           Select one option that is better in your case.
         </p>
         {answers.map((answer) => (
           <button
-            className={`mt-4 px-3 py-1.5 w-full rounded-lg border-2 border-tertiary-gray ${
+            className={`mt-4 px-3 py-1.5 w-full rounded-lg border-2 border-tertiary-gray transition-all duration-700 ${
               category === answer.text
                 ? "bg-primary-blue text-white" // Applied background blue when selected
-                : "bg-white text-black"
+                : "bg-white text-secondary-gray"
             }`}
             key={answer.value}
             onClick={() => handleOptionChange(answer.text)}
@@ -60,10 +60,6 @@ const UserData = () => {
     { image: Lady, description: UserName() },
     { image: Woman, description: Category() },
   ];
-  return (
-    <div>
-      <Onboarding elements={elements} />
-    </div>
-  );
+  return <Onboarding elements={elements} />;
 };
 export default UserData;

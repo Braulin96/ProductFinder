@@ -37,27 +37,27 @@ const Slide = ({ img, children }) => {
   const swiper = useSwiper();
   const swiperSlide = useSwiperSlide();
   return (
-    <div style={styles.container} className="flex">
+    <div style={styles.container} className="flex overflow-scroll">
       <div style={styles.slide} className="flex flex-col">
         {!swiper.isBeginning && (
           <a
-            className="p-4"
+            className="pt-4 px-4"
             style={{ zIndex: 1 }}
             onClick={() => swiper.slidePrev()}
           >
-            <FiChevronLeft style={{ color: "white" }} size={28} />
+            <FiChevronLeft style={{ color: "#1976d2" }} size={28} />
           </a>
         )}
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
           <div className="font-medium h-full flex">
-            <div className="bg-white bg-opacity-80 m-auto w-full py-14 rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray">
+            <div className="bg-white bg-opacity-80 m-auto w-full py-8 md:py-10 lg:py-12 rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray shadow-xl">
               {children}
             </div>
           </div>
           <div className="mt-auto">
             {swiper.isEnd ? (
-              <Link 
-              to ='/dashboard'
+              <Link
+                to="/dashboard"
                 className="rounded-lg cursor-pointer font-semibold flex bg-primary-blue py-1.5 justify-center text-white w-full"
                 //to={start}
               >
@@ -92,10 +92,13 @@ const Slide = ({ img, children }) => {
   );
 };
 
-const Onboarding = ({ elements, start, children }) => {
+const Onboarding = ({ elements }) => {
   return (
-    <div style={{ overflow: "hidden" }}>
-      <Swiper slidesPerView="auto" className="w-full flex justify-around">
+    <div className="overflow-scroll">
+      <Swiper
+        slidesPerView="auto"
+        className="w-full flex justify-around overflow-scroll"
+      >
         {elements.map((elements, index) => (
           <SwiperSlide key={index}>
             <Slide children={elements.description} img={elements.image} />
