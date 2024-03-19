@@ -5,7 +5,6 @@ import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/secondWoman.jpeg";
 import Lady from "assets/images/thirdLady.jpeg"
 
-
 const UserData = () => {
   const { name, handleNameChange, category, handleOptionChange } = useData();
 
@@ -18,7 +17,7 @@ const UserData = () => {
           type="text"
           value={name}
           onChange={handleNameChange}
-          className="mt-6 w-full rounded-lg border-2 border-gray-200 px-4 py-2 focus:ring-0 focus:outline-none focus:border-secondary-sage"
+          className="mt-6 w-full rounded-lg border-2 border-tertiary-gray px-4 py-1.5 focus:ring-0 focus:outline-none focus:border-primary-blue"
         />
       </div>
     );
@@ -42,7 +41,7 @@ const UserData = () => {
         </p>
         {answers.map((answer) => (
           <button
-            className={`mt-4 p-3 w-full rounded-lg ${
+            className={`mt-4 px-3 py-1.5 w-full rounded-lg border-2 border-tertiary-gray ${
               category === answer.text
                 ? "bg-primary-blue text-white" // Applied background blue when selected
                 : "bg-white text-black"
