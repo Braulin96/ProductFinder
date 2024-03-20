@@ -5,12 +5,12 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 //images:
 import Woman from "assets/images/thirdLady.jpeg";
-import Fragrance from "assets/images/category/perfume.jpeg"
-import Groceries from "assets/images/category/berries.jpeg"
-import HomeDecoration from "assets/images/category/home.jpeg"
-import Mobile from "assets/images/category/mobile.jpeg"
-import Skincare from "assets/images/category/skin.jpeg"
-import Laptop from "assets/images/category/laptop.jpeg"
+import Fragrance from "assets/images/category/perfume.jpeg";
+import Groceries from "assets/images/category/berries.jpeg";
+import HomeDecoration from "assets/images/category/home.jpeg";
+import Mobile from "assets/images/category/mobile.jpeg";
+import Skincare from "assets/images/category/skin.jpeg";
+import Laptop from "assets/images/category/laptop.jpeg";
 //lay and secondLady, thirdlady
 
 const elements = [
@@ -43,7 +43,7 @@ const elements = [
 const Home = () => {
   return (
     <div
-      className="flex flex-col items-center relative sm:px-4 bg-[#D9D9D9] px-2 py-2"
+      className="flex flex-col items-center relative sm:px-4 bg-[#D9D9D9] px-2 sm:py-0 py-2"
       style={{ height: "100vh" }}
     >
       <div className="my-auto md:px-12 py-12 rounded-3xl w-full max-w-7xl mx-auto flex md:flex-row flex-col gap-y-8 z-20 bg-gray-50 bg-opacity-60 shadow-xl gap-x-4 px-4">
@@ -81,7 +81,7 @@ const Home = () => {
                 <div className="w-auto sm:max-h-96 max-h-72 aspect-square mx-auto rounded-full flex justify-center">
                   <img
                     style={{ opacity: "0.8" }}
-                    className="rounded-full mx-auto shrink h-full border-2 border-primary-blue"
+                    className="rounded-full mx-auto shrink h-full border border-[#65a3e1]"
                     src={images.image}
                     alt="FitPeople"
                   />
@@ -100,7 +100,8 @@ const Home = () => {
       <div className="absolute z-10 h-full md:flex hidden">
         <div className="relative">
           <img style={{ height: "100vh", opacity: "0.7" }} src={Woman} />
-          <div className="absolute w-12 aspect-square bg-primary-blue rounded-full z-40 top-20 right-8 bg-opacity-20"></div>
+          <div className="absolute w-12 aspect-square bg-primary-blue rounded-full z-40 top-20 right-8 bg-opacity-40"></div>
+          <div className="absolute w-24 aspect-square bg-[#d5ae83] rounded-full z-40 bottom-8 left-8 bg-opacity-40"></div>
         </div>
       </div>
     </div>
