@@ -62,7 +62,7 @@ const Home = () => {
           </p>
           <Link
             to="questions"
-            className="hidden md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-lg bg-primary-blue text-white font-bold mt-4"
+            className="hidden slide md:flex px-16 sm:w-fit w-full mx-auto py-2 rounded-lg bg-primary-blue text-white font-bold mt-4"
           >
             Let's Start
           </Link>
@@ -92,9 +92,9 @@ const Home = () => {
         </div>
         <Link
           to="questions"
-          className="md:hidden flex px-24 sm:w-fit w-full mx-auto py-2 rounded-lg bg-primary-blue text-white font-bold "
+          className="slide md:hidden flex px-24 w-fit mx-auto py-2 rounded-lg bg-primary-blue text-white font-bold "
         >
-          <p className="mx-auto"> Let's Start</p>
+          <p className="mx-auto">Let's Start</p>
         </Link>
       </div>
       <div className="absolute z-10 h-full md:flex hidden">
