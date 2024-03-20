@@ -6,6 +6,7 @@ import Carousel from "components/shared/Carousel";
 import SpeedDialNav from "components/shared/SpeedDialNav";
 import Skeleton from "@mui/material/Skeleton";
 import { useMediaQuery } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ProductsByCategory = () => {
   const { data, isLoading, isError } = useRevenueData();
@@ -14,10 +15,26 @@ const ProductsByCategory = () => {
   // if (isLoading) {
   //   return <div>Loading...</div>;
   // }
-  if (isError) {
-    return <div>Error fetching data</div>;
-  }
-  return (
+  // if (isError) {
+  //   return <div>Error fetching data</div>;
+  // }
+  return isError ? (
+    <div
+      className="h-full flex flex-col justify-center items-center"
+      style={{ height: "60vh" }}
+    >
+      <p className="text-center text-2xl mb-4 text-secondary-gray font-light animate-fade-up animate-duration-[1s] animate-delay-[500]">
+        An error as occurred trying to get the products you request, we are
+        sorry to inform that is temporary unavailable, please try again latter.
+      </p>
+      <Link
+        to="/"
+        className="slide px-8 w-fit mx-auto py-2 rounded-lg bg-primary-blue text-white font-bold mt-4 animate-fade-up animate-duration-[1s] animate-delay-[1s]"
+      >
+        Back to Home Page
+      </Link>
+    </div>
+  ) : (
     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-8 gap-x-4 py-4">
       {isLoading && (
         <>
@@ -82,7 +99,7 @@ const ProductsByCategory = () => {
 
 const Dashboard = () => {
   const { name, category } = useData();
-  const { data, isLoading, isError } = useRevenueData();
+  const { isLoading, isError } = useRevenueData();
   return (
     <div
       className="flex flex-col items-center relative sm:px-4 text-secondary-gray"
@@ -91,15 +108,19 @@ const Dashboard = () => {
       <div className="w-full max-w-7xl mx-auto sm:px-2 px-4 sm:py-20 py-10 flex flex-col relative">
         {isLoading ? (
           <div className="py-4">
-          <Skeleton
-            variant="rounded"
-            className="mx-auto"
-            width="100%"
-            height={20}
-          />
+            <Skeleton
+              variant="rounded"
+              className="mx-auto"
+              width="100%"
+              height={20}
+            />
           </div>
         ) : (
-          <h1 className="sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8 animate-fade-up animate-duration-[1s] animate-delay-500">
+          <h1
+            className={`sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8 animate-fade-up animate-duration-[1s] animate-delay-500 ${
+              isError ? "hidden" : ""
+            }`}
+          >
             Hello <span className="font-light">{name}</span>, we have selected
             the best options in the market for you based on the category chose -{" "}
             <span className="text-primary-blue">{category}.</span>
