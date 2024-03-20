@@ -12,7 +12,7 @@ const ProductsByCategory = () => {
   const { data, isLoading, isError } = useRevenueData();
   // isLoading and isError you do not need to declare, automatically from react-query
   const isMobile = useMediaQuery("(max-width:768px)");
-  
+
   return isError ? (
     <div
       className="h-full flex flex-col justify-center items-center"
@@ -47,7 +47,7 @@ const ProductsByCategory = () => {
       {!isLoading &&
         data.map((recipe) => (
           <div
-            className="sm:col-span-1 rounded-lg overflow-hidden shadow-xl hover:shadow-2x flex py-4 transition-all duration-500 md:max-w-[400px] w-full h-[200px] font-light animate-fade-up animate-duration-[1s] animate-delay-[1s]"
+            className="bg-white hover:bg-tertiary-brown sm:col-span-1 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl flex py-4 transition-all duration-1000 md:max-w-[400px] w-full h-[200px] font-light animate-fade-up animate-duration-[1s] animate-delay-[1s]"
             key={recipe.title}
           >
             <div className="overflow-hidden w-1/2 my-auto px-2 relative">

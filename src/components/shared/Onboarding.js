@@ -43,7 +43,7 @@ const Slide = ({ img, children }) => {
       <div style={styles.slide} className="flex flex-col">
         {!swiper.isBeginning && (
           <a
-            className="mt-4 mx-4 bg-white w-10 aspect-square rounded-full flex shadow-2xl"
+            className="mt-4 mx-4 bg-white hover:bg-tertiary-brown cursor-pointer transition-all duration-1000 w-10 aspect-square rounded-full flex shadow-2xl"
             style={{ zIndex: 1 }}
             onClick={() => swiper.slidePrev()}
           >
