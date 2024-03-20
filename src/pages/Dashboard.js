@@ -10,20 +10,15 @@ import { Link } from "react-router-dom";
 
 const ProductsByCategory = () => {
   const { data, isLoading, isError } = useRevenueData();
-  const isMobile = useMediaQuery("(max-width:768px)");
   // isLoading and isError you do not need to declare, automatically from react-query
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
-  // if (isError) {
-  //   return <div>Error fetching data</div>;
-  // }
+  const isMobile = useMediaQuery("(max-width:768px)");
+  
   return isError ? (
     <div
       className="h-full flex flex-col justify-center items-center"
       style={{ height: "60vh" }}
     >
-      <p className="text-center text-2xl mb-4 text-secondary-gray font-light animate-fade-up animate-duration-[1s] animate-delay-[500]">
+      <p className="text-center sm:text-2xl text-xl mb-4 text-secondary-gray font-light animate-fade-up animate-duration-[1s] animate-delay-[500]">
         An error as occurred trying to get the products you request, we are
         sorry to inform that is temporary unavailable, please try again latter.
       </p>
