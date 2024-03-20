@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import Home from "pages/Home";
 import Questions from "pages/Questions";
-import ErrorPage from "pages/ErrorPage";
+import NotFound from "pages/NotFound";
 import Dashboard from "pages/Dashboard";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
   {
     path: "",
     element: <App />,
-    errorElement: <ErrorPage />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
