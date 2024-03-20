@@ -43,10 +43,10 @@ const elements = [
 const Home = () => {
   return (
     <div
-      className="flex flex-col items-center relative sm:px-4 bg-[#D9D9D9]"
+      className="flex flex-col items-center relative sm:px-4 bg-[#D9D9D9] px-2 py-2"
       style={{ height: "100vh" }}
     >
-      <div className="my-auto md:px-12 py-12 rounded-3xl w-full max-w-7xl mx-auto flex md:flex-row flex-col gap-y-8 z-20 bg-gray-50 bg-opacity-60 shadow-xl gap-x-4">
+      <div className="my-auto md:px-12 py-12 rounded-3xl w-full max-w-7xl mx-auto flex md:flex-row flex-col gap-y-8 z-20 bg-gray-50 bg-opacity-60 shadow-xl gap-x-4 px-4">
         <div className="md:w-1/2 w-full h-full text-center flex flex-col sm:gap-y-8 gap-y-4 text-secondary-gray my-auto justify-center">
           <h1 className="sm:text-4xl text-3xl">
             Welcome to
@@ -54,7 +54,7 @@ const Home = () => {
               Product Finder
             </span>
           </h1>
-          <p className="sm:text-lg text-md md:text-left text-center">
+          <p className="sm:text-lg text-left">
             Product Finder is an online platform where you can discover a wide
             range of products including phones, laptops, tablets, and
             smartwatches. Explore our collection and find the perfect product to
@@ -92,7 +92,7 @@ const Home = () => {
         </div>
         <Link
           to="questions"
-          className="md:hidden flex px-24 sm:w-fit w-full mx-auto py-2 rounded-full bg-primary-blue text-white font-bold "
+          className="md:hidden flex px-24 sm:w-fit w-full mx-auto py-2 rounded-lg bg-primary-blue text-white font-bold "
         >
           <p className="mx-auto"> Let's Start</p>
         </Link>
