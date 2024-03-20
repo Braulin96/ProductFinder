@@ -35,7 +35,7 @@ const ProductsByCategory = () => {
               <OpenModal
                 className="ml-auto"
                 openModalButton="Know More"
-                title={recipe.title}
+                title={recipe.title.toUpperCase()}
               >
                 <div>
                   <p className="mt-0 capitalize">
@@ -69,7 +69,7 @@ const Dashboard = () => {
       style={{ height: "100vh" }}
     >
       <div className="w-full max-w-7xl mx-auto sm:px-2 px-4 sm:py-20 py-10 flex flex-col relative">
-        <h1 className="sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8">
+        <h1 className="sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8 animate-fade-up animate-duration-[1s] animate-delay-500">
           Hello <span className="font-light">{name}</span>, we have selected the
           best options in the market for you based on the category chose - <span className="text-primary-blue">{category}.</span>
         </h1>
