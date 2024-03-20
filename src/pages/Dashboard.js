@@ -18,7 +18,7 @@ const ProductsByCategory = () => {
     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-8 gap-x-4 py-4">
       {data.map((recipe) => (
         <div
-          className="sm:col-span-1 rounded-lg overflow-hidden shadow-xl hover:shadow-2x flex py-4 transition-all duration-500 md:max-w-[400px] w-full h-[200px] font-light"
+          className="sm:col-span-1 rounded-lg overflow-hidden shadow-xl hover:shadow-2x flex py-4 transition-all duration-500 md:max-w-[400px] w-full h-[200px] font-light animate-fade-up animate-duration-[1s] animate-delay-1000"
           key={recipe.title}
         >
           <div className="overflow-hidden w-1/2 my-auto px-2 relative">
@@ -74,7 +74,7 @@ const Dashboard = () => {
           best options in the market for you based on the category chose - <span className="text-primary-blue">{category}.</span>
         </h1>
         <ProductsByCategory />
-        <div className="mt-auto absolute -bottom-10 sm:-bottom-5 right-0">
+        <div className="mt-auto absolute -bottom-10 sm:-bottom-5 right-0 animate-fade-up animate-duration-[1s] animate-delay-[1.8s]">
           <SpeedDialNav />
         </div>
       </div>
