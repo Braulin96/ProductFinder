@@ -17,7 +17,7 @@ const UserData = () => {
           type="text"
           value={name}
           onChange={handleNameChange}
-          className="mt-6 w-full rounded-lg border-2 border-tertiary-gray px-4 py-1.5 focus:ring-0 focus:outline-none focus:border-primary-blue animate-fade animate-duration-[1s] animate-delay-[1.4s]"
+          className="mt-6 w-full rounded-lg border-2 border-tertiary-brown px-4 py-1.5 focus:ring-0 focus:outline-none focus:border-primary-blue animate-fade animate-duration-[1s] animate-delay-[1.4s]"
         />
       </div>
     );
@@ -41,7 +41,7 @@ const UserData = () => {
         </p>
         {answers.map((answer) => (
           <button
-            className={`mt-4 px-3 py-1.5 w-full rounded-lg border-2 border-tertiary-gray ${
+            className={`mt-4 px-3 py-1.5 w-full rounded-lg border-2 border-tertiary-brown ${
               category === answer.text
                 ? "bg-primary-blue text-white"
                 : "bg-white text-secondary-gray"
