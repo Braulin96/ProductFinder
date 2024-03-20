@@ -48,7 +48,7 @@ The following npm packages have been installed to enhance the functionality and 
 
 - [Material-UI](https://mui.com/): A popular React UI framework for building responsive and customizable components.
 - [Animated-Tailwind](https://michalsnik.github.io/aos/](https://www.tailwindcss-animated.com/): A Tailwind CSS plugin for creating beautiful animations.
-- [Tanstack-Query](https://www.npmjs.com/package/react-scroll](https://tanstack.com/query/latest): TanStack Query gives you declarative, always-up-to-date auto-managed queries and mutations that directly improve both your developer and user experiences.
+- [Tanstack-Query]([https://www.npmjs.com/package/react-scroll](https://tanstack.com/query/latest](https://tanstack.com/query/latest)): TanStack Query gives you declarative, always-up-to-date auto-managed queries and mutations that directly improve both your developer and user experiences.
 
 ## Contributing
 
