@@ -35,7 +35,7 @@ const SpeedDialNav = () => {
   };
 
   return (
-    <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }}>
+    <Box sx={{ transform: "translateZ(0px)", flexGrow: 1 }} className="animate-fade-up animate-duration-[1s] animate-delay-[1.5s]">
       <SpeedDial
         ariaLabel="SpeedDial basic example"
         sx={{ position: "absolute", bottom: 16, right: 16 }}

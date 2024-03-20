@@ -35,7 +35,7 @@ const ProductsByCategory = () => {
       {!isLoading &&
         data.map((recipe) => (
           <div
-            className="sm:col-span-1 rounded-lg overflow-hidden shadow-xl hover:shadow-2x flex py-4 transition-all duration-500 md:max-w-[400px] w-full h-[200px] font-light"
+            className="sm:col-span-1 rounded-lg overflow-hidden shadow-xl hover:shadow-2x flex py-4 transition-all duration-500 md:max-w-[400px] w-full h-[200px] font-light animate-fade-up animate-duration-[1s] animate-delay-[1s]"
             key={recipe.title}
           >
             <div className="overflow-hidden w-1/2 my-auto px-2 relative">
@@ -82,20 +82,41 @@ const ProductsByCategory = () => {
 
 const Dashboard = () => {
   const { name, category } = useData();
+  const { data, isLoading, isError } = useRevenueData();
   return (
     <div
       className="flex flex-col items-center relative sm:px-4 text-secondary-gray"
       style={{ height: "100vh" }}
     >
       <div className="w-full max-w-7xl mx-auto sm:px-2 px-4 sm:py-20 py-10 flex flex-col relative">
-        <h1 className="sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8 animate-fade-up animate-duration-[1s] animate-delay-500">
-          Hello <span className="font-light">{name}</span>, we have selected the
-          best options in the market for you based on the category chose -{" "}
-          <span className="text-primary-blue">{category}.</span>
-        </h1>
+        {isLoading ? (
+          <Skeleton
+            variant="rounded"
+            className="mx-auto"
+            width="100%"
+            height={20}
+          />
+        ) : (
+          <h1 className="sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8 animate-fade-up animate-duration-[1s] animate-delay-500">
+            Hello <span className="font-light">{name}</span>, we have selected
+            the best options in the market for you based on the category chose -{" "}
+            <span className="text-primary-blue">{category}.</span>
+          </h1>
+        )}
+
         <ProductsByCategory />
-        <div className="mt-auto absolute -bottom-10 sm:-bottom-5 right-0 animate-fade-up animate-duration-[1s] animate-delay-[1.8s]">
-          <SpeedDialNav />
+
+        <div className="mt-auto absolute -bottom-10 sm:-bottom-5 right-0 ">
+          {isLoading ? (
+            <Skeleton
+              variant="circular"
+              className="mx-auto"
+              width={50}
+              height={50}
+            />
+          ) : (
+            <SpeedDialNav />
+          )}
         </div>
       </div>
     </div>
