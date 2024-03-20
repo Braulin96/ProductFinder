@@ -4,6 +4,7 @@ import SwiperCore from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import { useSwiper } from "swiper/react";
+import { useSwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { useData } from "components/hooks/DataContext";
 //icons:
@@ -36,6 +37,7 @@ const styles = {
 const Slide = ({ img, children }) => {
   const { name, category } = useData();
   const swiper = useSwiper();
+  const swiperSlide = useSwiperSlide();
   return (
     <div style={styles.container} className="flex overflow-scroll">
       <div style={styles.slide} className="flex flex-col">

@@ -24,10 +24,15 @@ const OpenModal = ({ title, openModalButton, children }) => {
   };
 
   return (
-    <React.Fragment className="">
+    <React.Fragment>
       <Button
         className="w-full"
-        style={{ justifyContent: "end", fontSize:'12px', width:'fit-content', marginLeft:'auto' }}
+        style={{
+          justifyContent: "end",
+          fontSize: "12px",
+          width: "fit-content",
+          marginLeft: "auto",
+        }}
         onClick={handleClickOpen}
       >
         {openModalButton}
@@ -40,11 +45,7 @@ const OpenModal = ({ title, openModalButton, children }) => {
         aria-describedby="alert-dialog-slide-description"
       >
         <DialogTitle>{title}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
-            {children}
-          </DialogContentText>
-        </DialogContent>
+        <DialogContent>{children}</DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Close</Button>
         </DialogActions>
