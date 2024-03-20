@@ -5,19 +5,10 @@ module.exports = {
     extend: {
       colors: {
         "primary-blue": "#1976d2",
-        //'primary-sage': "#1976d2",
-
-  
         "secondary-gray": "#424242",
-        'tertiary-brown': '#f9f3ec',
-
-        
-
-        "tertiary-gray": "#F0F0F0",
+        "tertiary-brown": "#f9f3ec",
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animated"),
-  ],
+  plugins: [require("tailwindcss-animated")],
 };

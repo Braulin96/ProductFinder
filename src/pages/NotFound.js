@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { TfiFaceSad } from "react-icons/tfi";
 
-const ErrorPage = () => {
+const NotFound = () => {
   return (
     <div className="h-full w-full flex" style={{ height: "100vh" }}>
       <div className="m-auto flex flex-col gap-y-2 text-secondary-gray px-2">
@@ -28,4 +28,4 @@ const ErrorPage = () => {
     </div>
   );
 };
-export default ErrorPage;
+export default NotFound;
