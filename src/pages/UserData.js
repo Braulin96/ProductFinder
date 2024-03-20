@@ -3,7 +3,7 @@ import Onboarding from "../components/shared/Onboarding";
 //images:
 import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/secondWoman.jpeg";
-import Man from "assets/images/family.jpeg";
+import Man from "assets/images/man.jpeg";
 
 const UserData = () => {
   const { name, handleNameChange, category, handleOptionChange } = useData();
