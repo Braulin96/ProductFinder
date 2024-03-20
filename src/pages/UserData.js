@@ -11,7 +11,9 @@ const UserData = () => {
   const UserName = () => {
     return (
       <div className="text-secondary-gray">
-        <label className="text-xl animate-fade animate-duration-[1s] animate-delay-[1s]"> What is you first name?</label>
+        <label className="text-xl animate-fade animate-duration-[1s] animate-delay-[1s]">
+          What is you first name?
+        </label>
         <input
           placeholder="type your name..."
           type="text"

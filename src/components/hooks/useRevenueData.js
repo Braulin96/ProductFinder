@@ -6,12 +6,12 @@ const useRevenueData = () => {
   const { category } = useQuestionsData(); // Move the hook call inside useRevenueData
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get(`https://dummyjson.com/products/category/${category}`);
-      //const response = await axios.get(`https://dummyjson.com/products`) 
-      console.log("Response:", response);
+      const response = await axios.get(
+        `https://dummyjson.com/products/category/${category}`
+      );
+      //const response = await axios.get(`https://dummyjson.com/products`)
       return response.data.products;
     } catch (error) {
-      console.error("Error fetching recipes:", error);
       throw error;
     }
   };

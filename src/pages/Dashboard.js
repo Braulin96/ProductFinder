@@ -45,10 +45,10 @@ const ProductsByCategory = () => {
         </>
       )}
       {!isLoading &&
-        data.map((recipe) => (
+        data.map((recipe,index) => (
           <div
             className="bg-white hover:bg-tertiary-brown sm:col-span-1 rounded-lg overflow-hidden shadow-xl hover:shadow-2xl flex py-4 transition-all duration-1000 md:max-w-[400px] w-full h-[200px] font-light animate-fade-up animate-duration-[1s] animate-delay-[1s]"
-            key={recipe.title}
+            key={index}
           >
             <div className="overflow-hidden w-1/2 my-auto px-2 relative">
               <img className="" src={recipe.thumbnail} alt={`Image`} />
