@@ -64,9 +64,9 @@ const Slide = ({ img, children }) => {
             {swiper.isEnd ? (
               <Link
                 to="/dashboard"
-                className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center text-white w-full transition-all duration-700  ${
+                className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center text-white w-full transition-all duration-700 ${
                   category
-                    ? "bg-opacity-80 cursor-pointer"
+                    ? "cursor-pointer"
                     : "bg-opacity-30 cursor-none pointer-events-none"
                 }`}
               >
@@ -77,7 +77,7 @@ const Slide = ({ img, children }) => {
                 onClick={() => {swiper.slideNext()}}
                 className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center w-full transition-all duration-700 text-white animate-fade-up animate-duration-[1s] animate-delay-[2s] ${
                   name.trim()
-                    ? "bg-opacity-80 cursor-pointer"
+                    ? "cursor-pointer"
                     : "bg-opacity-30 cursor-none pointer-events-none"
                 }`}
               >
