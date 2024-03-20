@@ -51,7 +51,7 @@ const ProductsByCategory = () => {
             key={index}
           >
             <div className="overflow-hidden w-1/2 my-auto px-2 relative">
-              <img className="" src={recipe.thumbnail} alt={`Image`} />
+              <img src={recipe.thumbnail} alt={recipe.title} />
             </div>
             <div className="px-6 flex flex-col w-1/2 my-auto h-full">
               <div className="my-auto">
