@@ -12,7 +12,7 @@ const Questions = () => {
     return (
       <div className="text-secondary-gray">
         <label className="text-xl animate-fade animate-duration-[1s] animate-delay-[1s]">
-          What is you first name?
+          What is your first name?
         </label>
         <input
           placeholder="type your name..."
