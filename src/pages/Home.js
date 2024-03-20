@@ -5,11 +5,11 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 //images:
 import Woman from "assets/images/thirdLady.jpeg";
-import Fragrance from "assets/images/category/fragrances.jpeg"
-import Groceries from "assets/images/category/groceries.jpeg"
+import Fragrance from "assets/images/category/perfume.jpeg"
+import Groceries from "assets/images/category/berries.jpeg"
 import HomeDecoration from "assets/images/category/home.jpeg"
 import Mobile from "assets/images/category/mobile.jpeg"
-import Skincare from "assets/images/category/skincare.jpeg"
+import Skincare from "assets/images/category/skin.jpeg"
 import Laptop from "assets/images/category/laptop.jpeg"
 //lay and secondLady, thirdlady
 
