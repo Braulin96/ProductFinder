@@ -90,12 +90,14 @@ const Dashboard = () => {
     >
       <div className="w-full max-w-7xl mx-auto sm:px-2 px-4 sm:py-20 py-10 flex flex-col relative">
         {isLoading ? (
+          <div className="py-4">
           <Skeleton
             variant="rounded"
             className="mx-auto"
             width="100%"
             height={20}
           />
+          </div>
         ) : (
           <h1 className="sm:text-3xl text-2xl sm:text-center text-left mb-8 font-extralight sm:leading-10 leading-8 animate-fade-up animate-duration-[1s] animate-delay-500">
             Hello <span className="font-light">{name}</span>, we have selected
@@ -103,9 +105,7 @@ const Dashboard = () => {
             <span className="text-primary-blue">{category}.</span>
           </h1>
         )}
-
         <ProductsByCategory />
-
         <div className="mt-auto absolute -bottom-10 sm:-bottom-5 right-0 ">
           {isLoading ? (
             <Skeleton
