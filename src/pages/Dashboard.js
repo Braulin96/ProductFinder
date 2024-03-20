@@ -67,7 +67,7 @@ const ProductsByCategory = () => {
                   openModalButton="Know More"
                   title={recipe.title.toUpperCase()}
                 >
-                  <div>
+                  <div className="text-secondary-gray">
                     <p className="mt-0 capitalize">
                       Description: {recipe.description}
                     </p>
