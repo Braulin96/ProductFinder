@@ -1,8 +1,14 @@
+import { Outlet } from "react-router-dom";
+import { DataProvider } from "./components/hooks/DataContext";
+
 function App() {
   return (
-    <div className="App">
-      Fitness app
-    </div>
+    <DataProvider>
+      <div className="App">
+        {/* <p>test</p> */}
+        <Outlet />
+      </div>
+    </DataProvider>
   );
 }
 
