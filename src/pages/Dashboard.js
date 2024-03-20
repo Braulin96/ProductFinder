@@ -21,24 +21,15 @@ const ProductsByCategory = () => {
     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-8 gap-x-4 py-4">
       {isLoading && (
         <>
-          <Skeleton
-            variant="rounded"
-            className="mx-auto"
-            width={isMobile ? "100%" : 350}
-            height={180}
-          />
-          <Skeleton
-            variant="rounded"
-            className="mx-auto"
-            width={isMobile ? "100%" : 350}
-            height={180}
-          />
-          <Skeleton
-            className="mx-auto"
-            variant="rounded"
-            width={isMobile ? "100%" : 350}
-            height={180}
-          />
+          {[...Array(5)].map((_, index) => (
+            <Skeleton
+              key={index}
+              variant="rounded"
+              className="mx-auto"
+              width={isMobile ? "100%" : 350}
+              height={180}
+            />
+          ))}
         </>
       )}
       {!isLoading &&
@@ -84,7 +75,7 @@ const ProductsByCategory = () => {
               </div>
             </div>
           </div>
-        ))} 
+        ))}
     </div>
   );
 };
