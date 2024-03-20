@@ -3,26 +3,16 @@
 Product Finder is a React app offering detailed product information sourced from the dummyjson API. Choose from categories like smartphones, laptops, fragrances, groceries, and home decor. Personalize your experience with a custom name and explore our diverse product selection effortlessly. Elevate your shopping journey with RosaCleaning today.
  
 ## Table of Contents
-# Assets
+### Assets
 - Contain all the images used in the project.
-# Components
+### Components
 - Hooks
 - Shared
-# Pages
+### Pages
 - Dashboard
 - NotFound
 - Home
 - Questions
-  
-- [Navbar](#navbar)
-- [HeroSection](#herosection)
-- [ChooseUs](#chooseus)
-- [OurService](#ourservice)
-- [Steps](#steps)
-- [Pricing](#pricing)
-- [Features](#features)
-- [Testimonials](#testimonials)
-- [Footer](#footer)
 
 ## Installation
 
