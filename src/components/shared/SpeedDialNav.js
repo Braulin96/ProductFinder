@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 // Icons
 import { GoHome } from "react-icons/go";
 import { GoQuestion } from "react-icons/go";
-import { MdRestartAlt } from "react-icons/md";
+import { CiLogout } from "react-icons/ci";
 
 const actions = [
   { icon: <GoHome color="#1976d2" size={24} />, name: "Home", link: "/" },
@@ -17,9 +17,9 @@ const actions = [
     link: "/questions",
   },
   {
-    icon: <MdRestartAlt color="#1976d2" size={24} />,
-    name: "New Answers",
-    link: "/questions",
+    icon: <CiLogout color="#1976d2" size={24} />,
+    name: "Logout",
+    link: "/",
   },
 ];
 
@@ -27,7 +27,7 @@ const SpeedDialNav = () => {
   const navigate = useNavigate();
 
   const handleActionClick = (link, name) => {
-    if (name === "New Answers") {
+    if (name === "Logout") {
       localStorage.clear(); // Clear localStorage only for "New Answers"
       window.location.href = link;
     }
