@@ -56,7 +56,7 @@ const Slide = ({ img, children }) => {
         )}
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
           <div className="font-medium h-full flex">
-            <div className="bg-white bg-opacity-80 m-auto w-full py-8 md:py-10 lg:py-12 rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray shadow-xl">
+            <div className="bg-white bg-opacity-80 m-auto w-full py-8 md:py-10 lg:py-12 rounded-lg px-8 justify-center flex flex-col text-center text-secondary-gray shadow-xl animate-fade-up animate-duration-500 animate-delay-500">
               {children}
             </div>
           </div>
@@ -75,7 +75,7 @@ const Slide = ({ img, children }) => {
             ) : (
               <a
                 onClick={() => {swiper.slideNext()}}
-                className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center w-full transition-all duration-700 text-white ${
+                className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center w-full transition-all duration-700 text-white animate-fade-up animate-duration-[1s] animate-delay-[2s] ${
                   name.trim()
                     ? "bg-opacity-80 cursor-pointer"
                     : "bg-opacity-30 cursor-none pointer-events-none"

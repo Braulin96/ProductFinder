@@ -11,13 +11,13 @@ const UserData = () => {
   const UserName = () => {
     return (
       <div className="text-secondary-gray">
-        <label className="text-xl"> What is you first name</label>
+        <label className="text-xl animate-fade animate-duration-[1s] animate-delay-[1s]"> What is you first name</label>
         <input
           placeholder="type your name..."
           type="text"
           value={name}
           onChange={handleNameChange}
-          className="mt-6 w-full rounded-lg border-2 border-tertiary-gray px-4 py-1.5 focus:ring-0 focus:outline-none focus:border-primary-blue"
+          className="mt-6 w-full rounded-lg border-2 border-tertiary-gray px-4 py-1.5 focus:ring-0 focus:outline-none focus:border-primary-blue animate-fade animate-duration-[1s] animate-delay-[1.4s]"
         />
       </div>
     );
