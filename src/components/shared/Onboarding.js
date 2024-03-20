@@ -16,20 +16,17 @@ const styles = {
     backgroundColor: "white",
     boxShadow: "rgb(149 157 165 / 20%) 0px 8px 24px",
     height: "100vh",
-    height: "100svh",
     width: "100%",
     maxHeight: 1000,
     maxWidth: 600,
     backgroundSize: "cover",
     backgroundPosition: "center",
-    backgroundColor: "white",
     position: "relative",
   },
   container: {
     minHeight: "100vh",
     alignItems: "center",
     justifyContent: "center",
-    background: "#00000020",
     background: "black",
   },
 };
@@ -42,7 +39,7 @@ const Slide = ({ img, children }) => {
     <div style={styles.container} className="flex overflow-scroll">
       <div style={styles.slide} className="flex flex-col">
         {!swiper.isBeginning && (
-          <a
+          <button
             className="mt-4 mx-4 bg-white hover:bg-tertiary-brown cursor-pointer transition-all duration-1000 w-10 aspect-square rounded-full flex shadow-2xl"
             style={{ zIndex: 1 }}
             onClick={() => swiper.slidePrev()}
@@ -52,7 +49,7 @@ const Slide = ({ img, children }) => {
               style={{ color: "#1976d2" }}
               size={28}
             />
-          </a>
+          </button>
         )}
         <div className="p-4 md:p-12 h-full flex flex-col" style={{ zIndex: 1 }}>
           <div className="font-medium h-full flex">
@@ -73,7 +70,7 @@ const Slide = ({ img, children }) => {
                 Start
               </Link>
             ) : (
-              <a
+              <button
                 onClick={() => {swiper.slideNext()}}
                 className={`rounded-lg font-semibold flex bg-primary-blue py-1.5 justify-center w-full transition-all duration-700 text-white animate-fade-up animate-duration-[1s] animate-delay-[2s] ${
                   name.trim()
@@ -82,7 +79,7 @@ const Slide = ({ img, children }) => {
                 }`}
               >
                 Next
-              </a>
+              </button>
             )}
           </div>
         </div>
