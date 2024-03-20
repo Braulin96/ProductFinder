@@ -1,6 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 import useQuestionsData from "components/hooks/useQuestionsData";
+
 
 const useRevenueData = () => {
   const { category } = useQuestionsData(); // Move the hook call inside useRevenueData

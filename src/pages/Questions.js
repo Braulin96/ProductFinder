@@ -5,7 +5,7 @@ import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/womanCategory.jpeg";
 import Man from "assets/images/man.jpeg";
 
-const UserData = () => {
+const Questions = () => {
   const { name, handleNameChange, category, handleOptionChange } = useData();
 
   const UserName = () => {
@@ -64,4 +64,4 @@ const UserData = () => {
   ];
   return <Onboarding elements={elements} />;
 };
-export default UserData;
+export default Questions;

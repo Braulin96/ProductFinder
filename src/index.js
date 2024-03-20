@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import Home from "pages/Home";
-import UserData from "pages/UserData";
+import Questions from "pages/Questions";
 import ErrorPage from "pages/ErrorPage";
 import Dashboard from "pages/Dashboard";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/questions",
-        element: <UserData />,
+        element: <Questions />,
       },
 
       {

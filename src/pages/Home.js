@@ -11,7 +11,6 @@ import HomeDecoration from "assets/images/category/home.jpeg";
 import Mobile from "assets/images/category/mobile.jpeg";
 import Skincare from "assets/images/category/skincare.jpeg";
 import Laptop from "assets/images/category/laptop.jpeg";
-//lay and secondLady, thirdlady
 
 const elements = [
   {
