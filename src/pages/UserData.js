@@ -2,7 +2,7 @@
 import Onboarding from "../components/shared/Onboarding";
 //images:
 import { useData } from "components/hooks/DataContext";
-import Woman from "assets/images/secondWoman.jpeg";
+import Woman from "assets/images/womanCategory.jpeg";
 import Man from "assets/images/man.jpeg";
 
 const UserData = () => {
