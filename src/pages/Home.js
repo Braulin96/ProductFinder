@@ -98,7 +98,7 @@ const Home = () => {
       </div>
       <div className="absolute z-10 h-full md:flex hidden">
         <div className="relative">
-          <img style={{ height: "100vh", opacity: "0.7" }} src={Woman} />
+          <img style={{ height: "100vh", opacity: "0.7" }} alt="woman" src={Woman} />
           <div className="absolute w-12 aspect-square bg-primary-blue rounded-full z-40 top-20 right-8 bg-opacity-40 animate-fade-down animate-duration-[1s] animate-delay-[2.6s]"></div>
           <div className="absolute w-24 aspect-square bg-[#d5ae83] rounded-full z-40 bottom-8 left-8 bg-opacity-40 animate-fade-up animate-duration-[1s] animate-delay-[3s]"></div>
         </div>
