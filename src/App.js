@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { DataProvider } from "./components/hooks/DataContext";
+import { DataProvider } from "components/hooks/DataContext";
 
 function App() {
   return (

@@ -1,5 +1,5 @@
 //components:
-import Onboarding from "../components/shared/Onboarding";
+import Onboarding from "components/shared/Onboarding";
 //images:
 import { useData } from "components/hooks/DataContext";
 import Woman from "assets/images/womanCategory.jpeg";
